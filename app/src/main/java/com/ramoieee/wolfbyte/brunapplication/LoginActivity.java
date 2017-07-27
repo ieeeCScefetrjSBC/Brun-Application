@@ -1,5 +1,6 @@
 package com.ramoieee.wolfbyte.brunapplication;
 
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         // Registering widgets
         button_signIn = (Button)findViewById(R.id.button_sign_in);
         button_forgotPassword = (Button)findViewById(R.id.button_forgot_pass);
-        button_createUser = (Button)findViewById(R.id.button_register);
+        //button_createUser = (Button)findViewById(R.id.button_register);
         field_email = (EditText)findViewById(R.id.field_email);
         field_password = (EditText)findViewById(R.id.field_password);
 
@@ -61,16 +62,24 @@ public class LoginActivity extends AppCompatActivity {
                 signInUser(field_email.getText().toString(), field_password.getText().toString());
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
-                    finish();
+                    String name = user.getDisplayName();
+                    Uri photoUrl = user.getPhotoUrl();
+                    if(name == null || photoUrl == null){
+                        Toast.makeText(LoginActivity.this, "You have no name or picture",
+                                Toast.LENGTH_SHORT).show();
+                    }else{
+                        finish();
+                    }
                 }
             }
         });
-        button_createUser.setOnClickListener(new View.OnClickListener() {
+
+/*        button_createUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createNewUser(field_email.getText().toString(), field_password.getText().toString());
             }
-        });
+        });*/
         button_forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void createNewUser(String email, String password){
+/*    private void createNewUser(String email, String password){
         Log.d(TAG, "createAccount:" + email);
 
 
@@ -117,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                         // ...
                     }
                 });
-    }
+    }*/
 
     private void signInUser(String email, String password) {
         Log.d(TAG, "signInUser:" + email);

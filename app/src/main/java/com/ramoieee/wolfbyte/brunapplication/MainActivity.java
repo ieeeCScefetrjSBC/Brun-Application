@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button_load_info;
+    private Button button_load_info, button_sign_out;
     private TextView userName, userEmail, userID;
 
     @Override
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button_load_info = (Button)findViewById(R.id.button_load_info);
+        button_sign_out = (Button)findViewById(R.id.button_sign_out);
         userName = (TextView)findViewById(R.id.userName);
         userEmail = (TextView)findViewById(R.id.userEmail);
         userID = (TextView)findViewById(R.id.userID);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     // Name, email address, and profile photo Url
                     String name = user.getDisplayName();
                     String email = user.getEmail();
-
+                    Uri photoUrl = user.getPhotoUrl();
                     // The user's ID, unique to the Firebase project. Do NOT use this value to
                     // authenticate with your backend server, if you have one. Use
                     // FirebaseUser.getToken() instead.
@@ -50,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
                     Intent int_SignIn = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(int_SignIn);
                 }
+            }
+        });
+        button_sign_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                userName.setText("blank");
+                userEmail.setText("blank");
+                userID.setText("blank");
             }
         });
     }
