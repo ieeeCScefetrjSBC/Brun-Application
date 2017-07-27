@@ -1,5 +1,6 @@
 package com.ramoieee.wolfbyte.brunapplication;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -30,16 +31,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Registering widgets
+        // Sign in widgets
         button_signIn = (Button)findViewById(R.id.button_sign_in);
         button_forgotPassword = (Button)findViewById(R.id.button_forgot_pass);
-        //button_createUser = (Button)findViewById(R.id.button_register);
         field_email = (EditText)findViewById(R.id.field_email);
         field_password = (EditText)findViewById(R.id.field_password);
 
         // Authentication Instance
         mAuth = FirebaseAuth.getInstance();
-        // Listens if user sign in or out
+        // Listens if user signs in or out
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -61,16 +61,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 signInUser(field_email.getText().toString(), field_password.getText().toString());
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user != null) {
-                    String name = user.getDisplayName();
-                    Uri photoUrl = user.getPhotoUrl();
-                    if(name == null || photoUrl == null){
-                        Toast.makeText(LoginActivity.this, "You have no name or picture",
-                                Toast.LENGTH_SHORT).show();
-                    }else{
-                        finish();
-                    }
-                }
+                checkUserData(user);
+
             }
         });
 
@@ -104,30 +96,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-/*    private void createNewUser(String email, String password){
-        Log.d(TAG, "createAccount:" + email);
-
-
-        //Firebase's User Creation Method
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
-
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "Failed attempt at signing in.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-
-                        // ...
-                    }
-                });
-    }*/
-
     private void signInUser(String email, String password) {
         Log.d(TAG, "signInUser:" + email);
 
@@ -148,6 +116,19 @@ public class LoginActivity extends AppCompatActivity {
                         // ...
                     }
                 });
+    }
+
+    private void checkUserData(FirebaseUser user){
+        if (user != null) {
+            String name = user.getDisplayName();
+            Uri photoUrl = user.getPhotoUrl();
+            if(name == null || photoUrl == null){
+                Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
+                startActivity(int_UserSettings);
+            }else{
+                finish();
+            }
+        }
     }
 
 
