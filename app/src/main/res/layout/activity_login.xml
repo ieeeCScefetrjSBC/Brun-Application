@@ -49,15 +49,6 @@
                 android:text="@string/action_sign_in" />
 
             <Button
-                android:id="@+id/button_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:background="@android:color/transparent"
-                android:text="@string/action_register"
-                android:textAllCaps="false"/>
-
-            <Button
                 android:id="@+id/button_forgot_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

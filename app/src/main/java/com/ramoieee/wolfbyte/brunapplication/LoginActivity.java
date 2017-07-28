@@ -21,11 +21,11 @@ import com.google.android.gms.tasks.Task;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
-    private Button button_signIn, button_forgotPassword, button_createUser;
+    private Button button_signIn, button_forgotPassword;
     private EditText field_email, field_password;
 
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseAuth Auth;
+    private FirebaseAuth.AuthStateListener AuthListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         field_password = (EditText)findViewById(R.id.field_password);
 
         // Authentication Instance
-        mAuth = FirebaseAuth.getInstance();
+        Auth = FirebaseAuth.getInstance();
         // Listens if user signs in or out
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
+        AuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -66,12 +66,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-/*        button_createUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createNewUser(field_email.getText().toString(), field_password.getText().toString());
-            }
-        });*/
         button_forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,21 +79,21 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
+        Auth.addAuthStateListener(AuthListener);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
+        if (AuthListener != null) {
+            Auth.removeAuthStateListener(AuthListener);
         }
     }
 
     private void signInUser(String email, String password) {
         Log.d(TAG, "signInUser:" + email);
 
-        mAuth.signInWithEmailAndPassword(email, password)
+        Auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -107,7 +101,10 @@ public class LoginActivity extends AppCompatActivity {
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
+                        if(task.isSuccessful()){
+                            FirebaseUser user = Auth.getCurrentUser();
+                            checkUserData(user);
+                        }else{
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, "Failed attempt at signing in",
                                     Toast.LENGTH_SHORT).show();
@@ -125,6 +122,7 @@ public class LoginActivity extends AppCompatActivity {
             if(name == null || photoUrl == null){
                 Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
                 startActivity(int_UserSettings);
+                finish();
             }else{
                 finish();
             }

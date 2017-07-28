@@ -15,29 +15,67 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/view_userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="No name"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+        <EditText
+            android:id="@+id/edit_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Name"
+            android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/userEmail"
+            android:id="@+id/view_userEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="No e-mail"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText
+            android:id="@+id/edit_userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No e-mail"
+            android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/userID"
+            android:id="@+id/view_userID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="No ID"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <Button
-            android:id="@+id/button_load_info"
+            android:id="@+id/button_edit_user_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Edit user information" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_save_user_info"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="Save"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/button_cancel_edit"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="Cancel"
+                android:visibility="gone"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/button_sign_out"

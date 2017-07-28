@@ -32,11 +32,41 @@ public class MainActivity extends AppCompatActivity {
 
         // TODO: REMOVE THIS BLOCK AFTER TESTING
         if(user != null){
-            Toast.makeText(LoginActivity.this, "A user is already logged in",
+            Toast.makeText(MainActivity.this, "A user is already logged in",
                     Toast.LENGTH_SHORT).show();
-            Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
+            Intent int_UserSettings = new Intent(MainActivity.this, UserSettingsActivity.class);
             startActivity(int_UserSettings);
         }
 
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+
+        // #########################
+        // CHECKS IF USER IS STILL SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user == null){
+            Toast.makeText(MainActivity.this, "You need to be logged in to access our app features",
+                    Toast.LENGTH_SHORT).show();
+            Intent int_SignIn = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(int_SignIn);
+        }
+        // ##########################
+    }
+    @Override
+    public void onPause(){
+        super.onPause();
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
     }
 }
