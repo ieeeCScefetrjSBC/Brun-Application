@@ -64,6 +64,7 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             <Button
                 android:id="@+id/button_save_user_info"
                 android:layout_weight="1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:text="Save"
@@ -72,6 +73,7 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
                 android:id="@+id/button_cancel_edit"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:textAllCaps="false"
                 android:text="Cancel"
                 android:visibility="gone"/>

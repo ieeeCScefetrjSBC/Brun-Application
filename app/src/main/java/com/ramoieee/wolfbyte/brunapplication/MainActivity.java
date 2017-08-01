@@ -59,9 +59,21 @@ public class MainActivity extends AppCompatActivity {
     public void onPause(){
         super.onPause();
     }
+
     @Override
     public void onResume(){
         super.onResume();
+
+        // #########################
+        // CHECKS IF USER IS STILL SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user == null){
+            Toast.makeText(MainActivity.this, "You need to be logged in to access our app features",
+                    Toast.LENGTH_SHORT).show();
+            Intent int_SignIn = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(int_SignIn);
+        }
+        // ##########################
 
     }
 

@@ -29,12 +29,12 @@ public class UserSettingsActivity extends AppCompatActivity {
         button_save_user_info = (Button)findViewById(R.id.button_save_user_info);
         button_cancel_edit = (Button)findViewById(R.id.button_cancel_edit);
         
-        // TEXTVIEWS
+        // TEXT VIEWS
         view_userName = (TextView)findViewById(R.id.view_userName);
         view_userEmail = (TextView)findViewById(R.id.view_userEmail);
         view_userID = (TextView)findViewById(R.id.view_userID);
 
-        // EDITTEXTS
+        // EDIT TEXTS
         edit_userName = (EditText)findViewById(R.id.edit_userName);
         edit_userEmail = (EditText)findViewById(R.id.edit_userEmail);
         
@@ -70,9 +70,9 @@ public class UserSettingsActivity extends AppCompatActivity {
         button_edit_user_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editUserInfo();
                 button_cancel_edit.setVisibility(View.VISIBLE);
                 button_save_user_info.setVisibility(View.VISIBLE);
+                editUserInfo();
             }
         });
 
@@ -81,12 +81,21 @@ public class UserSettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 button_cancel_edit.setVisibility(View.GONE);
                 button_save_user_info.setVisibility(View.GONE);
+                // SHOW TEXT VIEWS
+                view_userName.setVisibility(View.VISIBLE);
+                view_userEmail.setVisibility(View.VISIBLE);
+                view_userID.setVisibility(View.VISIBLE);
+
+                // HIDE EDIT TEXT
+                edit_userName.setVisibility(View.GONE);
+                edit_userEmail.setVisibility(View.GONE);
             }
         });
 
         button_save_user_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
             }
         });

@@ -8,53 +8,54 @@
     tools:context="com.ramoieee.wolfbyte.brunapplication.LoginActivity"
     android:orientation="vertical"
     android:layout_margin="@dimen/activity_horizontal_margin" >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/AppLogo"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/field_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/AppLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher" />
 
-                android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress"
-                android:maxLines="1" />
+                <EditText
+                    android:id="@+id/field_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-            <EditText
-                android:id="@+id/field_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
 
-                android:hint="@string/prompt_password"
-                android:inputType="textPassword"
-                android:maxLines="1" />
+                <EditText
+                    android:id="@+id/field_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-            <Button
-                android:id="@+id/button_sign_in"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="90dp"
-                android:text="@string/action_sign_in" />
+                    android:hint="@string/prompt_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
 
-            <Button
-                android:id="@+id/button_forgot_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="@string/forgot_pass"
-                android:textAllCaps="false" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+                <Button
+                    android:id="@+id/button_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="90dp"
+                    android:text="@string/action_sign_in" />
+
+                <Button
+                    android:id="@+id/button_forgot_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/forgot_pass"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
