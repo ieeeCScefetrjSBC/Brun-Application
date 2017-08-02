@@ -54,7 +54,7 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Edit user information" />
+            android:text="Editar informações" />
 
 
         <LinearLayout
@@ -67,7 +67,7 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:text="Save"
+                android:text="Salvar"
                 android:visibility="gone"/>
             <Button
                 android:id="@+id/button_cancel_edit"
@@ -75,16 +75,23 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textAllCaps="false"
-                android:text="Cancel"
+                android:text="Cancelar"
                 android:visibility="gone"/>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button_back_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Voltar" />
 
         <Button
             android:id="@+id/button_sign_out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Sign Out" />
+            android:text="Desconectar" />
     </LinearLayout>
 </ScrollView>
 </LinearLayout>

@@ -1,18 +1,17 @@
 <resources>
-    <string name="app_name">Brun Application</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="app_name">Guby</string>
+    <string name="title_activity_login">Acessar</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="forgot_pass">Forgot your password?</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_register">Don\'t have an account? Register here</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Senha</string>
+    <string name="forgot_pass">Esqueceu sua senha?</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="error_invalid_email">Este e-mail não é válido</string>
+    <string name="error_invalid_password">Esta senha é muito curta</string>
+    <string name="error_incorrect_password">Está senha está incorreta</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
 
 
-    <string name="loading">Loading...</string>
+    <string name="loading">Carregando...</string>
 </resources>

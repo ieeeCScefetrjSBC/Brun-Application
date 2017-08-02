@@ -102,11 +102,15 @@ public class LoginActivity extends AppCompatActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if(task.isSuccessful()){
-                            FirebaseUser user = Auth.getCurrentUser();
-                            checkUserData(user);
+                            Log.w(TAG, "signInWithEmail:success", task.getException());
+                            Toast.makeText(LoginActivity.this, "Acesso permitido",
+                                    Toast.LENGTH_SHORT).show();
+                            //FirebaseUser user = Auth.getCurrentUser();
+                            //checkUserData(user);
+                            finish();
                         }else{
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
-                            Toast.makeText(LoginActivity.this, "Failed attempt at signing in",
+                            Toast.makeText(LoginActivity.this, "Falha na tentativa de acesso",
                                     Toast.LENGTH_SHORT).show();
                         }
 

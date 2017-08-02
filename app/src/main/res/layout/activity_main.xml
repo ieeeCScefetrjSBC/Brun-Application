@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:layout_margin="@dimen/activity_horizontal_margin"
     tools:context="com.ramoieee.wolfbyte.brunapplication.MainActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -20,14 +21,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:padding="30dp"
+                app:srcCompat="@drawable/gubyamarelo" />
 
             <TextView
                 android:id="@+id/text_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginBottom="50dp"
+                android:gravity="center"
                 android:text="Olá, bem-vindo(a)"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
                 android:textSize="36sp"
@@ -38,15 +40,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Atividades de estudo"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:text="Atividades de estudo" />
+
             <Button
                 android:id="@+id/button_user_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Perfil do usuário"/>
-            
+                android:text="Perfil do usuário" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

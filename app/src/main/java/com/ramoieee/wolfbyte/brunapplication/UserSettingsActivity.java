@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class UserSettingsActivity extends AppCompatActivity {
 
-    private Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit;
+    private Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
     private TextView view_userName, view_userEmail, view_userID;
     private EditText edit_userName, edit_userEmail;
 
@@ -28,6 +28,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         button_sign_out = (Button)findViewById(R.id.button_sign_out);
         button_save_user_info = (Button)findViewById(R.id.button_save_user_info);
         button_cancel_edit = (Button)findViewById(R.id.button_cancel_edit);
+        button_back_main = (Button)findViewById(R.id.button_back_main);
         
         // TEXT VIEWS
         view_userName = (TextView)findViewById(R.id.view_userName);
@@ -58,7 +59,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         // Signs user out and cleans the data fields on screen
         button_sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 view_userName.setText("blank");
                 view_userEmail.setText("blank");
@@ -99,7 +100,15 @@ public class UserSettingsActivity extends AppCompatActivity {
 
             }
         });
+
+        button_back_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
+
 
     protected void editUserInfo(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
