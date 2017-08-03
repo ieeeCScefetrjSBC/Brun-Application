@@ -1,0 +1,314 @@
+{
+  "points" : {
+    "users" : {
+      "Example" : {
+        "bio" : {
+          "acertos" : 0,
+          "erros" : 0
+        },
+        "fis" : {
+          "acertos" : 0,
+          "erros" : 0
+        },
+        "geo" : {
+          "acertos" : 0,
+          "erros" : 0
+        },
+        "hist" : {
+          "acertos" : 0,
+          "erros" : 0
+        },
+        "mat" : {
+          "acertos" : 0,
+          "erros" : 0
+        },
+        "port" : {
+          "acertos" : 0,
+          "erros" : 0
+        },
+        "quim" : {
+          "acertos" : 0,
+          "erros" : 0
+        }
+      }
+    }
+  },
+  "questions" : {
+    "Example" : {
+      "altA" : 1,
+      "altB" : 2,
+      "altC" : 3,
+      "altD" : 4,
+      "altE" : 5,
+      "enunciado" : "Quanto é 2+2?",
+      "gabarito" : "altD"
+    },
+    "bio" : {
+      "Example" : 0,
+      "quantidade" : 0
+    },
+    "fis" : {
+      "Eletrostática" : [ null, {
+        "altA" : "3,0*(10)^15     ",
+        "altB" : "4,2*(10)^12 ",
+        "altC" : "3,8*(10)^14  ",
+        "altD" : "4,5*(10)^18",
+        "enunciado" : "Um corpo eletrizado positivamente apresenta a quantidade de carga de 480µC. Calcule o número de elétrons perdidos pelo corpo, inicialmente  neutro? Dado: 1,6*10^(-19) C.",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "1,5*(10)^15",
+        "altB" : "3,5*(10)^15 ",
+        "altC" : "1,5*(10)^13  ",
+        "altD" : "4,5*(10)^11",
+        "enunciado" : "Calcule o número de elétrons perdidos por um corpo, inicialmente neutro, que apresenta a carga de 2,4 µC? Dado: 1,6*(10)^(-19) C",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "6,5C",
+        "altB" : "7,0C ",
+        "altC" : "8,5C ",
+        "altD" : "9,0C",
+        "enunciado" : "Num sistema eletricamente isolado, constuido de três corpos, A,B e C, há a seguinte distribuição inicial de cargas  elétricas Qa = 10 C, Qb = 5,0 C, Qc = -8,0 C.  Ocorrem, então, duas transferência  de cargas : 2,0 C de A para B e 1,5 C de B para C. Determine a quantidade de carga elétrica no sistema antes e depois da transferência?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "A=8,5C  B=5,5C   C=-6,5C ",
+        "altB" : "A=-6,5C  B=5,5C   C=8,5C  ",
+        "altC" : "A=5,5C  B=8,5C   C=-6,5C ",
+        "altD" : "A=-6,5C  B=8,5C   C=5,5C",
+        "enunciado" : "Em relação a questão 5, determine q quantidades de carga elétrica do corpo A,B e C respectivamente após as transferência?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "bastão de ebonite",
+        "altB" : "bolinha de cobre e pano de seda",
+        "altC" : "bastão de ebonite e bolinha de cobre",
+        "altD" : "bolinha de cobre    ",
+        "enunciado" : "Dispõe – se de um bastão de ebonite, um pano de seda e uma bolinha de cobre, todos eletricamente neutros. Atrita-se, então, o bastão com o pano e, depois , coloca-se o pano em contato coma bolinha suspensa em um fio isolante.Qual ou quais corpos ficarão com cargas elétricas negativas?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "Q/8",
+        "altB" : "3Q/5 ",
+        "altC" : "Q/4  ",
+        "altD" : "2Q/3    ",
+        "enunciado" : "Dispõe-se de de quatro esferas metálicas isoladas umas das outras. Três delas (A,B e C) estão neutras e a quarta D está eletrizada  com carga Q. Coloca-se D em contato sucessivamente com A,B e C. Qual a carga final de D?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "QP = 2,0 mC, QR = –3,0 mC e QS = –3,0 mC.",
+        "altB" : "QP = 3,0 mC, QR = –2,0 mC e QS = –3,0 mC.",
+        "altC" : "QP = 2,0 mC, QR = –3,0 mC e QS = 3,0 mC.",
+        "altD" : "QP = 2,0 mC, QR = 3,0 mC e QS = –3,0 mC.",
+        "enunciado" : "Duas pequenas esferas metálicas idênticas, P e S, estão eletrizadas com cargas +4,0 mC e –8,0 mC, respectivamente. Uma terceira esfera R, idêntica às outras duas e inicialmente descarregada, é colocada em contato, primeiro, com a esfera P e, depois, com a esfera S. Todas as esferas estão presas a suportes isolantes. Determinar as cargas finais das esferas P, R e S, respectivamente?",
+        "gabarito" : "COLOCAR"
+      } ],
+      "cinemática" : [ null, {
+        "altA" : "80 Km/h",
+        "altB" : "70 Km/h",
+        "altC" : "66 Km/h",
+        "altD" : "75 Km/h",
+        "enunciado" : "Uma rodovia é percorrida por um automóvel que passa pelo Km 35, as 8h, e pelo Km 195, as 10h. Sabe-se que, no Km 120, o automóvel fica parado durante 10 min. Determine a velocidade escalar média desenvolvida no intervalo de tempo das 8h as 10h?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "15 Km/h",
+        "altB" : "18 Km/h     ",
+        "altC" : "20 Km/h ",
+        "altD" : "24 Km/h",
+        "enunciado" : "Um atleta deseja percorrer 25 Km em 2h. Por dificuldades encontradas no trajeto, percorre 10 Km com a velocidade escalar média de  8 Km/h. Para terminar o percurso dentro do tempo previsto, qual deve ser a velocidade escalar m[edia no trecho restante?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "16 m/s",
+        "altB" : "18 m/s",
+        "altC" : "15 m/s",
+        "altD" : "25 m/s",
+        "enunciado" : "Uma partícula percorre a metade de um percurso com a velocidade escalar média de 40 m/s e a outra metade com a de 10 m/s. Qual é a velocidade escalar média da partícula no percurso inteiro?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "2,5h e 190Km",
+        "altB" : "2h e 195Km",
+        "altC" : "2,5h e 192Km",
+        "altD" : "2,2h e 189Km",
+        "enunciado" : "Dois móveis A e B partem ao mesmo tempo das posições x1 = 17Km e x2 = 392 Km e desenvolvem as velocidades constantes iguais a 70 Km/h e 80 Km/h, repectivamente, em valores absolutos. Qual o tempo decorrido até o encontro e qual a posição de encontro?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "3h e 130Km",
+        "altB" : "3,2h e 136Km",
+        "altC" : "3,2h e 138Km",
+        "altD" : "3,1h e 137Km",
+        "enunciado" : "Se na questão anterior, o móvel A partisse 1,5 h depois do móvel B, qual seria o tempo decorrido a partir da saída de B até o encontro e qual seria a posição de encontro?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "102Km",
+        "altB" : "115Km",
+        "altC" : "120Km",
+        "altD" : "125Km",
+        "enunciado" : "Numa determinada rodovia, um automóvel parte do Km 230 e entra em MRU retrógrado com velociadde escalar de 70 Km/h, em valor absoluto. Por qual posição estará passando após 1h 30min de movimento?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "-2.0 m/s2",
+        "altB" : "-2,5 m/s2",
+        "altC" : "-3,0 m/s2",
+        "altD" : "-3,5 m/s2",
+        "enunciado" : "Um onibus com velocidade de 54 Km/h é freado, parando em 5,0 segundos. Qual é a aceleração escalar média da freada?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "1440 fotos e 1 min e 12s ",
+        "altB" : "1420 fotos e 1 min e 24s",
+        "altC" : "1430 fotos e 1 min e 12s",
+        "altD" : "1440 fotos e 1 min e 24s",
+        "enunciado" : "Uma cena de novela foi filmada durante 1 min, na proporção de 24 fotos por segundo. A projeçãoda cena foi realizada a razão a razão de 20 fotos por segundo. Qual foi o número de fotos tiradas e o tempo de projeção?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "t = 2s, Não muda de sentido, 20 m/s",
+        "altB" : "t = 3s, t =1s, 10 m/s",
+        "altC" : "t = 5s, t =2s, 8 m/s",
+        "altD" : "t = 2s, Não muda de sentido, 10 m/s",
+        "enunciado" : "Um ponto material que sai de uma trajetória com espaço inicial -30 metros e com velocidade inicial de 5 m/s está acelerado a       10 m/s2. Qual é o instante em que esse móvel passa pela origem da trajetória o instante em que ele muda de sentido e a velocidade escalar média entre 0 e 3 segundos?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "-2 m/s2 e 12s",
+        "altB" : "-3 m/s2 e 12s",
+        "altC" : "-2 m/s2 e 10s",
+        "altD" : "- 3m/s2 e 10s",
+        "enunciado" : "Um caminhão, com velocidade escalar de 72 Km/h, é freado uniformemente até parar. Sabe-se que o caminhão desloca-se 100 metros durante a freagem. Qual é a aceleração escalar e o tempo de freagem?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "3,5m",
+        "altB" : "4,0m",
+        "altC" : "4,5m",
+        "altD" : "5,5m",
+        "enunciado" : "Uma partícula parte do ponto A e atinge o ponto B, em MRU, com velocidade de 10 m/s, em 0,30 s. A partir do ponto B, ela é retardada uniformemente a 20 m/s2, em valor absoluto, até parar no ponto C. Calcule o deslocamento de A até C. ",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "5,0 m/s",
+        "altB" : "6,0 m/s",
+        "altC" : "7,0 m/s ",
+        "altD" : "8,0 m/s",
+        "enunciado" : "Um móvel descreve um MCUV de 10m de raio, a partir do repouso, no sentido horário. A aceleração escalar é igual a 1,0 m/s2. Então, no instante t = 5,0s, determine a intensidade da velocidade vetorial?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "65 Km/h",
+        "altB" : "70 Km/h",
+        "altC" : "75 Km/h ",
+        "altD" : "80 Km/h",
+        "enunciado" : "Um ônibus percorre a distância de 480 Km, entre Santos e Curitiba, com velocidade escalar média de  60 Km/h. De curitiba a Florianópolis, distantes 300 Km, o ônibus desenvolve a velocidade escalar média de 75 Km/h. Qual é a velocidade média do ônibus no percurso de Santos a Florianópolis?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "180m",
+        "altB" : "190m ",
+        "altC" : "200m ",
+        "altD" : "210m",
+        "enunciado" : "Um indivíduo abandona uma pedra na boca de um poço sem água. Sabendo que ele gasta 6,00 s até atingir o fundo do poço e que a velocidade do som no á é de 340 m/s, calcule, desprezando os efeitos do ar com a gravidade igual a 10m/s2.Qual á profundidade do poço?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "6,53 s",
+        "altB" : "6,50s",
+        "altC" : "6,43s",
+        "altD" : "6,40s",
+        "enunciado" : "Em relação a questão 4, Qual é o intervalo de aproximado tempo desde o abandono da pedra até a chegada do som (do impacto no fundo) ao ouvido do indivíduo (na boca do poço).",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : 172800,
+        "altB" : 175300,
+        "altC" : 169250,
+        "altD" : 173570,
+        "enunciado" : "A velocidade de projeção de um filme é constante e a razão de 24 fotografias  projetadas em cada segundo na tela. Quantas fotografias são projetadas na tela durante a projeção  de um filme  que dura 2 horas.",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "3s",
+        "altB" : "4s",
+        "altC" : "5s",
+        "altD" : "6s",
+        "enunciado" : "Um corpo é aremessado verticalmente para cima, do solo, com velocidade escalar de 30 m/s. Desprezando os efeitos do ar e adotando a gravidade igual a 10m/s2 , determine o tempo de subida.",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "35m",
+        "altB" : "40m",
+        "altC" : "45m",
+        "altD" : "50m",
+        "enunciado" : "Em relação a questão 17, determine a altura máxima do movimento?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "6s",
+        "altB" : "7s",
+        "altC" : "8s",
+        "altD" : "9s",
+        "enunciado" : "Em relação a questão 17, determine o instante de chegada ao solo?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "-40 m/s",
+        "altB" : "-35 m/s ",
+        "altC" : "-30 m/s ",
+        "altD" : "-25 m/s",
+        "enunciado" : "Em relação a questão 17, determine  a velocidade escalar ao voltar ao solo?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "5,0 m/s ",
+        "altB" : "6,0 m/s  ",
+        "altC" : "7,0 m/s ",
+        "altD" : "8,0 m/s",
+        "enunciado" : "Um móvel descreve um MCUV de 10m de raio, a partir do repouso, no sentido horário. A aceleração escalar é igual a 1,0 m/s2. Então, no instante t = 5,0s, determine a intensidade da velocidade vetorial?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "2,0 m/s2",
+        "altB" : "2,5 m/s2   ",
+        "altC" : "3,0 m/s2  ",
+        "altD" : "3,5 m/s2",
+        "enunciado" : "Em relação a questão 14, qual a intensidade da aceleração centrípeta?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "1/3s e 3 Hz                ",
+        "altB" : "1/3s e 2 Hz",
+        "altC" : "1/2s e 3 Hz                   ",
+        "altD" : "1/2s e 2 Hz",
+        "enunciado" : "Um determinado MCU, de 2,5 m de raio, é descrito no sentido anti - horário por um móvel com a velocidade linear de 15π m/s. Sendo o espaço angular inicial igual a 2 rad, determine o período e a frequência do movimento.",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "50 rpm",
+        "altB" : "60 rpm ",
+        "altC" : "70 rpm     ",
+        "altD" : "80 rpm",
+        "enunciado" : "Dois cilindros, 1 e 2, giram ligados por uma correia que náo desliza sobre eles. Os valores dos raios R1 = 20cm e                 R2 = 60cm. Sendo a frequência de rotação do cilindro 1 igual a de 150 rpm, qual é a frequência do cilindro 2?",
+        "gabarito" : "COLOCAR"
+      }, {
+        "altA" : "5m/s2",
+        "altB" : "6m/s2",
+        "altC" : "7m/s2 ",
+        "altD" : "8m/s2",
+        "enunciado" : "Certa variação de velocidade escalar é conseguida da seguinte forma: a primeira metade da variação com a aceleração média de 20 m/s2 e a outra metade com a de 5 m/s2. Determine a acelera;áo escalar m[edia na varia;áo total da velocidade escalar?",
+        "gabarito" : "COLOCAR"
+      } ],
+      "quantidade" : 0
+    },
+    "geo" : {
+      "Example" : 0,
+      "Israel x Palestina" : [ null, 0 ],
+      "Regionalizações" : [ null, 0 ],
+      "cartografia" : [ null, 0 ],
+      "curvas, fuso-horários e projeções" : [ null, 0 ],
+      "quantidade" : 0
+    },
+    "hist" : {
+      "Example" : 0,
+      "quantidade" : 0
+    },
+    "mat" : {
+      "Example" : 0,
+      "quantidade" : 0
+    },
+    "port" : {
+      "Example" : 0,
+      "quantidade" : 0
+    },
+    "quim" : {
+      "Example" : 0,
+      "quantidade" : 0
+    }
+  },
+  "users" : {
+    "Example" : {
+      "Ano" : "1º ano ensino médio",
+      "Birth" : "2017/01/01",
+      "Gender" : "Male",
+      "Matricula" : "123456ABC",
+      "Name" : "John Doe",
+      "fav_area" : "exatas"
+    }
+  }
+}
