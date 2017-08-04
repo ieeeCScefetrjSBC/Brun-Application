@@ -44,26 +44,26 @@
       "gabarito" : "altD"
     },
     "bio" : {
-      "Lipídios, proteínas e ácidos nucleicos" : [ null, {
+      "Lipídios, Proteínas e Ácidos Nucléicos" : [ null, {
        "altA" : "Farinha de trigo",
        "altB" : "Banha",
        "altC" : "Ovo",
        "altD" : "Leite",
-       "enunciado" :"(FGV) Para melhor suprir deficiência de proteína a dieta deve incluir";
+       "enunciado" :"(FGV) Para melhor suprir deficiência de proteína a dieta deve incluir",
        "gabarito" : "altC" 
     },
     "fis" : {
       "Eletrostática" : [ null, {
-        "altA" : "3,0*(10)^15     ",
-        "altB" : "4,2*(10)^12 ",
-        "altC" : "3,8*(10)^14  ",
+        "altA" : "3,0*(10)^15",
+        "altB" : "4,2*(10)^12",
+        "altC" : "3,8*(10)^14",
         "altD" : "4,5*(10)^18",
         "enunciado" : "Um corpo eletrizado positivamente apresenta a quantidade de carga de 480µC. Calcule o número de elétrons perdidos pelo corpo, inicialmente  neutro? Dado: 1,6*10^(-19) C.",
         "gabarito" : "COLOCAR"
       }, {
         "altA" : "1,5*(10)^15",
-        "altB" : "3,5*(10)^15 ",
-        "altC" : "1,5*(10)^13  ",
+        "altB" : "3,5*(10)^15",
+        "altC" : "1,5*(10)^13",
         "altD" : "4,5*(10)^11",
         "enunciado" : "Calcule o número de elétrons perdidos por um corpo, inicialmente neutro, que apresenta a carga de 2,4 µC? Dado: 1,6*(10)^(-19) C",
         "gabarito" : "COLOCAR"
