@@ -44,8 +44,13 @@
       "gabarito" : "altD"
     },
     "bio" : {
-      "Example" : 0,
-      "quantidade" : 0
+      "Lipídios, proteínas e ácidos nucleicos" : [ null, {
+       "altA" : "Farinha de trigo",
+       "altB" : "Banha",
+       "altC" : "Ovo",
+       "altD" : "Leite",
+       "enunciado" :"(FGV) Para melhor suprir deficiência de proteína a dieta deve incluir";
+       "gabarito" : "altC" 
     },
     "fis" : {
       "Eletrostática" : [ null, {
