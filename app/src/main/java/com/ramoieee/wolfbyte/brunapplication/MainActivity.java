@@ -16,10 +16,13 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button button_study_activitiestest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button_study_activitiestest = (Button) findViewById(R.id.button_study_activities);
 
         // #########################
         // CHECKS IF USER IS ALREADY SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
@@ -37,8 +40,17 @@ public class MainActivity extends AppCompatActivity {
             Intent int_UserSettings = new Intent(MainActivity.this, UserSettingsActivity.class);
             startActivity(int_UserSettings);
         }
-
+        button_study_activitiestest.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+               Intent quizAct = new Intent(MainActivity.this, QuizActivity.class);
+                startActivity(quizAct);
+                finish();
+            }
+        });
     }
+
+
 
     @Override
     public void onStart(){

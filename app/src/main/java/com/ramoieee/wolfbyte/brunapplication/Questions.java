@@ -7,4 +7,5 @@ public class Questions {
     public String altC;
     public String altD;
     public String gabarito;
+
 }

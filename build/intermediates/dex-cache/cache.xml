@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\09eb86583e695bd477e186d0c933e46df9aaca3a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_14c12c9dd00066f997aac35f38ea667ca4c17f0a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_004818e429fcf428c7a67196a068f182f0d267f1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\9aedf92e3151af1481efdb501e4d0c105049c9b5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_eb1fac038c727b6e5db92eaf32a08cf10cc6d82f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\64ec6f31c53b83a8e35ced47cc0bb12ed8f5935e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a052ac735b6f0b990a352500af42894da9b04d74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\67d11eb669175864362fa10231bb070de8fc541b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ee589173ad38d0e4b7385e95e867895bd3b472eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\5995c81ab0e9fd967428be8359a3146531537aff\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9e7a7d10b095505a4b795d5895b4efba7cf01cde\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\ef470316459c8dcab771bdcf5c57ad0aa9d9622e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_abc815cc448abc57ac3b6f78761996a8898bee38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\a810c867f3fced75fa9eeac0d432867660021263\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_94e355a3d9c94ea44cd870a3fab19c61fd3c2fa5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\089f5ef93cf456818dcb54d029426ed378ea2af9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dff3275fbbf3fcfd386f6abca7fa0e0d3b9c594a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\3c634a88cb4ff4b544d9bde03dc19f9841cc057a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7ed8d47e70d65d79c4e6ef8db4168c1f831fafe0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\6262b1851c67d0f8250d24c46dea671bf2662678\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dd7aa97642c29ac513c5eb5ef3b1ae73bf0d0eae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\4996a8de7219c8aead7f608c3a2f138ea00e4140\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c6185026c6af7eb1737732651d3fba9cf296a497\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\8118726c8729e2a861e2ef4f739ef77c2c5aae62\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_452e26ae06de50d96a522b845b31d43fd83a0a69\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\dd4e117234366f98351054707c7b7efa9e1018d3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d9228a0205fdd3dcb6c386b76a5cbac88c6de1f3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\9549b44da2451ad11fa9c3b6a03e3fe1860e9695\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_83ad9195b4ac620320f6f2a42057a662b19dbee7\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\c157b54d923055e133c00bffa652e01b38f5724a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_b059bf9728f0b5da3073d3b2aa65cbd2c1256eb8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\e6561fe0a564512f291f65db1b0ee94324d0b256\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1abd140c81160cc5d1e2f7cb743153cbd5d986b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\718c067dfefe4fa847ab12015713e0a7514aab2b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cd7ac55b649b55cf5ac1a15a6920906ee1853d7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\bb685a03130d7dae920ad38b3cd03fe45174182e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_b941c7fb16944033cd5a70948d7ff2159ecef5d9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\a81741a3c1b607cc70b9aa22ce366bde8ab589bb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8ddaba61678f1425efb383af4079db873b4f9f12\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\def7e288a8320766960c20ae7928752df76be1fe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_1708566b0b6aecb6e35ea114140e0afe6501407c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\66be768883ae186a5cfe18af8ddfb5cae388dfd1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_acaab1a22c0c27e1b46782e560fa629eff752682.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\2b93dcf4bd9dfd3b1d4f1ebf369f72dda169b85a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d6cfc3b7d08755aae8236a5a249669e3d275105c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\e5c49ef810f64538b7285bf830ca69a2383939fa\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3a707211b5be23379c94da8158b37bfe4aa5feec\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_abf6ca6fe5a023be30918e820dfb1b904d32ce8c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\48f1419f1d43b5ce4cef80db4368c1221f81d5ac\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6a065484814310bff7c52b9ce3e81e1dfc3b6344\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f05a70b156ee8482507ffb37297056968a83b3e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\089f5ef93cf456818dcb54d029426ed378ea2af9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_dff3275fbbf3fcfd386f6abca7fa0e0d3b9c594a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_004818e429fcf428c7a67196a068f182f0d267f1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\ef470316459c8dcab771bdcf5c57ad0aa9d9622e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_abc815cc448abc57ac3b6f78761996a8898bee38\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\a81741a3c1b607cc70b9aa22ce366bde8ab589bb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_8ddaba61678f1425efb383af4079db873b4f9f12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\5995c81ab0e9fd967428be8359a3146531537aff\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_9e7a7d10b095505a4b795d5895b4efba7cf01cde.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\09eb86583e695bd477e186d0c933e46df9aaca3a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_14c12c9dd00066f997aac35f38ea667ca4c17f0a\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\9aedf92e3151af1481efdb501e4d0c105049c9b5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_eb1fac038c727b6e5db92eaf32a08cf10cc6d82f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\a810c867f3fced75fa9eeac0d432867660021263\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_94e355a3d9c94ea44cd870a3fab19c61fd3c2fa5\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\64ec6f31c53b83a8e35ced47cc0bb12ed8f5935e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_a052ac735b6f0b990a352500af42894da9b04d74.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\67d11eb669175864362fa10231bb070de8fc541b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_ee589173ad38d0e4b7385e95e867895bd3b472eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\3c634a88cb4ff4b544d9bde03dc19f9841cc057a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_7ed8d47e70d65d79c4e6ef8db4168c1f831fafe0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\6262b1851c67d0f8250d24c46dea671bf2662678\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_dd7aa97642c29ac513c5eb5ef3b1ae73bf0d0eae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\8118726c8729e2a861e2ef4f739ef77c2c5aae62\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_452e26ae06de50d96a522b845b31d43fd83a0a69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\4996a8de7219c8aead7f608c3a2f138ea00e4140\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_c6185026c6af7eb1737732651d3fba9cf296a497.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\2b93dcf4bd9dfd3b1d4f1ebf369f72dda169b85a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_d6cfc3b7d08755aae8236a5a249669e3d275105c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\dd4e117234366f98351054707c7b7efa9e1018d3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_d9228a0205fdd3dcb6c386b76a5cbac88c6de1f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\e5c49ef810f64538b7285bf830ca69a2383939fa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_3a707211b5be23379c94da8158b37bfe4aa5feec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\718c067dfefe4fa847ab12015713e0a7514aab2b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_cd7ac55b649b55cf5ac1a15a6920906ee1853d7f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\c157b54d923055e133c00bffa652e01b38f5724a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b059bf9728f0b5da3073d3b2aa65cbd2c1256eb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\9549b44da2451ad11fa9c3b6a03e3fe1860e9695\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_83ad9195b4ac620320f6f2a42057a662b19dbee7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\e6561fe0a564512f291f65db1b0ee94324d0b256\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_1abd140c81160cc5d1e2f7cb743153cbd5d986b2.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\bb685a03130d7dae920ad38b3cd03fe45174182e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b941c7fb16944033cd5a70948d7ff2159ecef5d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\thain\.android\build-cache\48f1419f1d43b5ce4cef80db4368c1221f81d5ac\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_6a065484814310bff7c52b9ce3e81e1dfc3b6344.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\def7e288a8320766960c20ae7928752df76be1fe\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1708566b0b6aecb6e35ea114140e0afe6501407c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fe7cf30510ddcaa49cf4d33a16e38d6fc82eb716">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f96d2f626d802339ef643b728ebfad172fb89edd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\.android\build-cache\66be768883ae186a5cfe18af8ddfb5cae388dfd1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_acaab1a22c0c27e1b46782e560fa629eff752682\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\thain\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_abf6ca6fe5a023be30918e820dfb1b904d32ce8c\classes.dex" />
+    </item>
+
+</items>
