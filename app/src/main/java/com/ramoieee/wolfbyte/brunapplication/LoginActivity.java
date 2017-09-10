@@ -17,6 +17,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
@@ -26,10 +28,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth Auth;
     private FirebaseAuth.AuthStateListener AuthListener;
+    DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // Sign in widgets
         button_signIn = (Button)findViewById(R.id.button_sign_in);
@@ -51,7 +56,8 @@ public class LoginActivity extends AppCompatActivity {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
-                // ...
+                // ...;
+
             }
         };
 
@@ -118,7 +124,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
     private void checkUserData(FirebaseUser user){
         if (user != null) {
             String name = user.getDisplayName();
@@ -130,8 +135,15 @@ public class LoginActivity extends AppCompatActivity {
             }else{
                 finish();
             }
+        String uid = user.getUid();
         }
     }
+    private void writeNewUser(String Ano, String Birth, String Gender, String Matricula, String Name, String fav_area){
+        user_teste NewUser = new user_teste(Ano, Birth, Gender, Matricula, Name, fav_area);
 
+        mDatabase.child("users").child(uid).setValue(Ano, Birth, Gender, Matricula, Name, fav_area);
+    }
 
 }
+//admin@example.com
+//123456
