@@ -1,7 +1,6 @@
 package com.ramoieee.wolfbyte.brunapplication;
-
-import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,18 +10,21 @@ import com.google.firebase.database.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
+
 public class QuizActivity extends AppCompatActivity {
+    //public static final String PREFS_NAME = "MyPrefsFile";
 
     private Button button_altA, button_altB, button_altC, button_altD, button_altE;
     private TextView text_enunciado;
 
     String enunciado, altA, altB, altC, altD, altE, gabarito;
-    int answerCount;
+    public int answerCount = 0;
 
     DatabaseReference questionRef;
     ArrayList arrayChildren = new ArrayList(); //Array para colocar todas as perguntas e suas alternativas/gabarito
     Long numberOfChildren; //Váriavel pra colocar quantas questões tem
-    int ind; //Váriavel para saber a pergunta de qual indice puxar do array
+    public int ind; //Váriavel para saber a pergunta de qual indice puxar do array
 
     public void setInd(int ind){
         this.ind = ind; //método para mudar o valor de ind em qualquer lugar da classe
@@ -45,13 +47,35 @@ public class QuizActivity extends AppCompatActivity {
             button_altB.setText(altB);
             button_altC.setText(altC);
             button_altD.setText(altD);
-            button_altE.setText(altE); //Ascrescentei a alternativa E, que não tinha antes
+            button_altE.setText(altE); //Acrescentei a alternativa E, que não tinha antes
         }
         else{ //Se o index for igual ao número de perguntas, é porque chegou ao final e passa pra activity das matérias (provisório)
+            setInd(0);
+            SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putInt("key_name2", 0);
+            editor.commit();
             Intent int_quiz_example = new Intent(QuizActivity.this, SubjectsActivity.class);
             startActivity(int_quiz_example);
         }
     }
+
+    public void continuarParou(){
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        int pageNumber = pref.getInt("key_name2", 0);
+        if(pageNumber == 0){
+            System.out.println("entrou");
+            Collections.shuffle(arrayChildren);
+            setAnswerCount(0); //Faz o answerCount ser 0, provisório
+            setInd(0);//Faz o ind ser 0, provisório
+            ExibirPergunta(ind);
+        }
+        else{
+            setInd(pageNumber);
+            ExibirPergunta(ind);
+        }
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
@@ -66,7 +90,7 @@ public class QuizActivity extends AppCompatActivity {
 
         questionRef = FirebaseDatabase.getInstance().getReference("questions");
 
-        questionRef.child("bio").child("Clonagem").addValueEventListener(new ValueEventListener() {
+        questionRef.child("bio").child("Ciclos Biogeoquimicos").addValueEventListener(new ValueEventListener() {
             @Override
 
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -74,16 +98,14 @@ public class QuizActivity extends AppCompatActivity {
                 for (DataSnapshot itemSnapshot2 : dataSnapshot.getChildren()) {
                     arrayChildren.add(itemSnapshot2.getValue(Questions.class)); //adiciona cada questão no array
                 }
-                Collections.shuffle(arrayChildren); //Embaralha array
-                setAnswerCount(0); //Faz o answerCount ser 0, provisório
-                setInd(0);//Faz o ind ser 0, provisório
-                ExibirPergunta(ind); //Exibe pela primeira vez a primeira pergunta
+                continuarParou();
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
+
 
         button_altA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +117,7 @@ public class QuizActivity extends AppCompatActivity {
                     setAnswerCount(answerCount+1);
                     System.out.println(answerCount);
                 }
+                arrayChildren.remove(ind);
                 setInd(ind+1); //aumenta o índice
                 ExibirPergunta(ind);
             }
@@ -155,4 +178,13 @@ public class QuizActivity extends AppCompatActivity {
         });
 
     };;
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("key_name2", ind);
+        editor.commit();
+    }
 }
