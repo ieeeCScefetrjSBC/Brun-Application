@@ -111,9 +111,8 @@ public class LoginActivity extends AppCompatActivity {
                             Log.w(TAG, "signInWithEmail:success", task.getException());
                             Toast.makeText(LoginActivity.this, "Acesso permitido",
                                     Toast.LENGTH_SHORT).show();
-                            //FirebaseUser user = Auth.getCurrentUser();
-                            //checkUserData(user);
-                            finish();
+                            FirebaseUser user = Auth.getCurrentUser();
+                            checkUserData(user);
                         }else{
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, "Falha na tentativa de acesso",
@@ -128,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
         if (user != null) {
             String name = user.getDisplayName();
             Uri photoUrl = user.getPhotoUrl();
-            if(name == null || photoUrl == null){
+            if(name == null && photoUrl == null){
                 Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
                 startActivity(int_UserSettings);
                 finish();
