@@ -3,18 +3,27 @@ package com.ramoieee.wolfbyte.brunapplication;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class UserSettingsActivity extends AppCompatActivity {
 
-    private Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
+    private static final String TAG = "UserSettingsActivity";
+
+    Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
     private TextView view_userName, view_userEmail, view_userID;
     private EditText edit_userName, edit_userEmail;
 
@@ -67,7 +76,8 @@ public class UserSettingsActivity extends AppCompatActivity {
                 finish();
             }
         });
-        
+
+        // Shows the Edit Text fields to add/change user info
         button_edit_user_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +86,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 editUserInfo();
             }
         });
+
 
         button_cancel_edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +108,22 @@ public class UserSettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+                UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                        .setDisplayName(edit_userName.getText().toString())
+                        // .setPhotoUri()
+                        .build();
+
+                user.updateProfile(profileUpdates)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Log.d(TAG, "User profile updated.");
+                                }
+                            }
+                        });
             }
         });
 
@@ -114,10 +140,6 @@ public class UserSettingsActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         // Name, email address, and profile photo Url
         String name = user.getDisplayName();
-        String email = user.getEmail();
-        Uri photoUrl = user.getPhotoUrl();
-        // The user's ID, unique to the Firebase project.
-        String uid = user.getUid();
 
         // HIDE TEXT VIEWS
         view_userName.setVisibility(View.GONE);
@@ -127,8 +149,6 @@ public class UserSettingsActivity extends AppCompatActivity {
         // SHOW EDIT TEXT
         edit_userName.setVisibility(View.VISIBLE);
         edit_userName.setText(name);
-        edit_userEmail.setVisibility(View.VISIBLE);
-        edit_userEmail.setText(email);
 
     }
 }

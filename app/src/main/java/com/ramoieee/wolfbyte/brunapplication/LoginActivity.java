@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
-    private Button button_signIn, button_forgotPassword;
+    Button button_signIn, button_forgotPassword;
     private EditText field_email, field_password;
 
     private FirebaseAuth Auth;
@@ -135,13 +135,7 @@ public class LoginActivity extends AppCompatActivity {
             }else{
                 finish();
             }
-        String uid = user.getUid();
         }
-    }
-    private void writeNewUser(String Ano, String Birth, String Gender, String Matricula, String Name, String fav_area){
-        user_teste NewUser = new user_teste(Ano, Birth, Gender, Matricula, Name, fav_area);
-
-        mDatabase.child("users").child(uid).setValue(Ano, Birth, Gender, Matricula, Name, fav_area);
     }
 
 }
