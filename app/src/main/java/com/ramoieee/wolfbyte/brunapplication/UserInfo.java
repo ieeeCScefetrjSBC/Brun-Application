@@ -2,14 +2,14 @@ package com.ramoieee.wolfbyte.brunapplication;
 
 public class UserInfo {
 
-    public String Ano;
+    public String Year;
     public String Birth;
     public String Gender;
     public String Matricula;
     public String fav_area;
 
-    public UserInfo (String Ano, String Birth, String Gender, String Matricula, String fav_area) {
-        this.Ano = Ano;
+    public UserInfo (String Year, String Birth, String Gender, String Matricula, String fav_area) {
+        this.Year = Year;
         this.Birth = Birth;
         this.Gender = Gender;
         this.Matricula = Matricula;
@@ -17,7 +17,7 @@ public class UserInfo {
     }
 
     public UserInfo (){
-        this.Ano = "";
+        this.Year = "";
         this.Birth = "";
         this.Gender = "";
         this.Matricula = "";
