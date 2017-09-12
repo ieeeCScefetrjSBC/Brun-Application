@@ -17,19 +17,24 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
-    private Button button_signIn, button_forgotPassword;
+    Button button_signIn, button_forgotPassword;
     private EditText field_email, field_password;
 
     private FirebaseAuth Auth;
     private FirebaseAuth.AuthStateListener AuthListener;
+    DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // Sign in widgets
         button_signIn = (Button)findViewById(R.id.button_sign_in);
@@ -51,7 +56,8 @@ public class LoginActivity extends AppCompatActivity {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
-                // ...
+                // ...;
+
             }
         };
 
@@ -105,9 +111,8 @@ public class LoginActivity extends AppCompatActivity {
                             Log.w(TAG, "signInWithEmail:success", task.getException());
                             Toast.makeText(LoginActivity.this, "Acesso permitido",
                                     Toast.LENGTH_SHORT).show();
-                            //FirebaseUser user = Auth.getCurrentUser();
-                            //checkUserData(user);
-                            finish();
+                            FirebaseUser user = Auth.getCurrentUser();
+                            checkUserData(user);
                         }else{
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, "Falha na tentativa de acesso",
@@ -118,12 +123,11 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
     private void checkUserData(FirebaseUser user){
         if (user != null) {
             String name = user.getDisplayName();
             Uri photoUrl = user.getPhotoUrl();
-            if(name == null || photoUrl == null){
+            if(name == null && photoUrl == null){
                 Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
                 startActivity(int_UserSettings);
                 finish();
@@ -133,5 +137,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
 }
+//admin@example.com
+//123456

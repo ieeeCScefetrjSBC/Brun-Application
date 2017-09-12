@@ -14,43 +14,86 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/view_userName"
+        <TextView android:id="@+id/view_userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No name"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
-        <EditText
-            android:id="@+id/edit_userName"
+        <EditText android:id="@+id/edit_userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No Name"
             android:visibility="gone"/>
 
-        <TextView
-            android:id="@+id/view_userEmail"
+        <TextView android:id="@+id/view_userEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No e-mail"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-        <EditText
-            android:id="@+id/edit_userEmail"
+        <EditText android:id="@+id/edit_userEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No e-mail"
             android:visibility="gone"/>
 
-        <TextView
-            android:id="@+id/view_userID"
+        <TextView android:id="@+id/view_userBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No birthdate"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No birthdate"
+            android:visibility="gone"/>
+
+        <TextView android:id="@+id/view_userYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No year specified"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No year specified"
+            android:visibility="gone"/>
+
+        <TextView android:id="@+id/view_userMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No number"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No number"
+            android:visibility="gone"/>
+
+        <TextView android:id="@+id/view_userFavArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No favorite area"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userFavArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No favorite area"
+            android:visibility="gone"/>
+
+
+        <TextView android:id="@+id/view_userID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No ID"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-        <Button
-            android:id="@+id/button_edit_user_info"
+        <Button android:id="@+id/button_edit_user_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
@@ -61,16 +104,16 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/button_save_user_info"
+
+            <Button android:id="@+id/button_save_user_info"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:text="Salvar"
                 android:visibility="gone"/>
-            <Button
-                android:id="@+id/button_cancel_edit"
+
+            <Button android:id="@+id/button_cancel_edit"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -79,15 +122,13 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
                 android:visibility="gone"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button_back_main"
+        <Button android:id="@+id/button_back_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Voltar" />
 
-        <Button
-            android:id="@+id/button_sign_out"
+        <Button android:id="@+id/button_sign_out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
