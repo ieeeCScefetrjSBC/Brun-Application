@@ -17,10 +17,10 @@ public class UserInfo {
     }
 
     public UserInfo (){
-        this.Year = "";
-        this.Birth = "";
-        this.Gender = "";
-        this.Matricula = "";
-        this.fav_area = "";
+        this.Year = null;
+        this.Birth = null;
+        this.Gender = null;
+        this.Matricula = null;
+        this.fav_area = null;
     }
 }
