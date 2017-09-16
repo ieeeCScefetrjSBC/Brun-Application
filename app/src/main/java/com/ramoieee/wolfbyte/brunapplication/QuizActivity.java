@@ -25,12 +25,16 @@ public class QuizActivity extends AppCompatActivity {
     ArrayList arrayChildren = new ArrayList(); //Array para colocar todas as perguntas e suas alternativas/gabarito
     Long numberOfChildren; //Váriavel pra colocar quantas questões tem
     public int ind; //Váriavel para saber a pergunta de qual indice puxar do array
+    String intentValores = "";
 
     public void setInd(int ind){
         this.ind = ind; //método para mudar o valor de ind em qualquer lugar da classe
     }
     public void setAnswerCount(int answerCount){
         this.answerCount = answerCount; //método para mudar o valor de answerCount em qualquer lugar da classe
+    }
+    public void setNumberOfChildren(long numberOfChildren){
+        this.numberOfChildren = numberOfChildren; //método para mudar o valor do setNumberOfChildren em qualquer lugar da classe
     }
     public void ExibirPergunta(int index){ //Método para exibir as perguntas
         if(index < numberOfChildren) {
@@ -55,23 +59,26 @@ public class QuizActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = pref.edit();
             editor.putInt("key_name2", 0);
             editor.commit();
-            Intent int_quiz_example = new Intent(QuizActivity.this, SubjectsActivity.class);
-            startActivity(int_quiz_example);
+            Intent int_feedback = new Intent(QuizActivity.this, FeedbackActivity.class);
+            intentValores = answerCount + "#" + numberOfChildren; //A quantidade de acertos vai para uma string junto com o numero de perguntas.
+            //Exemplo: 2#8 <- isso indica que a pessoa acertou 2 e tem 8 questões, na outra activity isso é separado.
+            int_feedback.putExtra("Value", intentValores); //String é passada para a outra activity
+            startActivity(int_feedback);
         }
     }
 
     public void continuarParou(){
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-        int pageNumber = pref.getInt("key_name2", 0);
-        if(pageNumber == 0){
+        int parou = pref.getInt("key_name2", 0);
+        if(parou == 0){ //Se o valor salvo em parou for zero, é porque o usuário ainda não fez o quiz ou está refazendo (por enquanto é possivel)
             System.out.println("entrou");
             Collections.shuffle(arrayChildren);
             setAnswerCount(0); //Faz o answerCount ser 0, provisório
             setInd(0);//Faz o ind ser 0, provisório
             ExibirPergunta(ind);
         }
-        else{
-            setInd(pageNumber);
+        else{ //Caso o usuário tenha saido do aplicativo no meio das perguntas, irá setar o indice onde parou
+            setInd(parou);
             ExibirPergunta(ind);
         }
     }
@@ -94,7 +101,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
 
             public void onDataChange(DataSnapshot dataSnapshot) {
-                numberOfChildren = dataSnapshot.getChildrenCount(); //Pega o número de questões
+                setNumberOfChildren(dataSnapshot.getChildrenCount());//Pega o número de questões
                 for (DataSnapshot itemSnapshot2 : dataSnapshot.getChildren()) {
                     arrayChildren.add(itemSnapshot2.getValue(Questions.class)); //adiciona cada questão no array
                 }
@@ -115,7 +122,7 @@ public class QuizActivity extends AppCompatActivity {
                 String gab = t.gabarito; //Coloca o gabarito na variável gab, não tava certo fazendo direto então coloquei na variável
                 if (gab.equals("altA")) {
                     setAnswerCount(answerCount+1);
-                    System.out.println(answerCount);
+                    System.out.println(answerCount); //debug
                 }
                 arrayChildren.remove(ind);
                 setInd(ind+1); //aumenta o índice

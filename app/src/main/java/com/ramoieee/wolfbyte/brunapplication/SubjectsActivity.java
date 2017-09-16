@@ -19,8 +19,8 @@ public class SubjectsActivity extends AppCompatActivity {
 
         button_subject_example.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                    Intent int_quiz_example = new Intent(SubjectsActivity.this, QuizActivity.class);
-                    startActivity(int_quiz_example);
+                Intent int_quiz_example = new Intent(SubjectsActivity.this, QuizActivity.class);
+                startActivity(int_quiz_example);
             }
         });
     }
