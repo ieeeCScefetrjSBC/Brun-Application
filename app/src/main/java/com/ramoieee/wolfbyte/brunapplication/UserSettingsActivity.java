@@ -10,7 +10,6 @@
 
 package com.ramoieee.wolfbyte.brunapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -146,7 +145,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 DatabaseReference myRef = database.getReference("users");
 
                 myUser.fav_area = edit_userFavArea.getText().toString();
-                myUser.Birth = edit_userBirth.getText().toString();
+                myUser.birth = edit_userBirth.getText().toString();
 
                 myRef.child(user.getUid()).setValue(myUser);
 
@@ -203,11 +202,11 @@ public class UserSettingsActivity extends AppCompatActivity {
         edit_userName.setVisibility(View.VISIBLE);
         edit_userName.setText(name);
         edit_userBirth.setVisibility(View.VISIBLE);
-        edit_userBirth.setText(myUser.Birth);
+        edit_userBirth.setText(myUser.birth);
         edit_userYear.setVisibility(View.VISIBLE);
-        edit_userYear.setText(myUser.Year);
+        edit_userYear.setText(myUser.year);
         edit_userMatricula.setVisibility(View.VISIBLE);
-        edit_userMatricula.setText(myUser.Matricula);
+        edit_userMatricula.setText(myUser.student_id);
         edit_userFavArea.setVisibility(View.VISIBLE);
         edit_userFavArea.setText(myUser.fav_area);
 
@@ -236,10 +235,10 @@ public class UserSettingsActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()){
                         myUser = dataSnapshot.getValue(UserInfo.class);
-                        view_userBirth.setText(myUser.Birth);
-                        view_userYear.setText(myUser.Year);
+                        view_userBirth.setText(myUser.birth);
+                        view_userYear.setText(myUser.year);
                         view_userFavArea.setText(myUser.fav_area);
-                        view_userMatricula.setText(myUser.Matricula);
+                        view_userMatricula.setText(myUser.student_id);
                     }
                 }
 

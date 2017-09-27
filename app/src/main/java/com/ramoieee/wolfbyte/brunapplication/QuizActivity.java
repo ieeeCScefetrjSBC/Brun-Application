@@ -95,9 +95,12 @@ public class QuizActivity extends AppCompatActivity {
 
         text_enunciado = (TextView)findViewById(R.id.text_enunciado);
 
+        String discipline = getIntent().getExtras().getString("discipline");
+        String subject = getIntent().getExtras().getString("subject");
+
         questionRef = FirebaseDatabase.getInstance().getReference("questions");
 
-        questionRef.child("bio").child("Ciclos Biogeoquimicos").addValueEventListener(new ValueEventListener() {
+        questionRef.child(discipline).child(subject).addValueEventListener(new ValueEventListener() {
             @Override
 
             public void onDataChange(DataSnapshot dataSnapshot) {

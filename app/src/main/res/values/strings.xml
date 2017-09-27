@@ -2,6 +2,9 @@
     <string name="app_name">Guby</string>
     <string name="title_activity_login">Acessar</string>
 
+    <!-- General Strings -->
+    <string name="loading">Carregando...</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">E-mail</string>
     <string name="prompt_password">Senha</string>
@@ -12,6 +15,20 @@
     <string name="error_incorrect_password">Está senha está incorreta</string>
     <string name="error_field_required">Este campo é obrigatório</string>
 
+    <!-- Strings related to spinners -->
 
-    <string name="loading">Carregando...</string>
+    <string name="discipline_prompt">Selecione uma disciplina</string>
+
+    <string-array name="discipline_arrays">
+        <item>Biologia</item>
+        <item>Física</item>
+        <item>Geografia</item>
+        <item>História</item>
+        <item>Matemática</item>
+        <item>Português</item>
+        <item>Química</item>
+    </string-array>
+
+    <string name="subject_prompt">Selecione um assunto</string>
+
 </resources>

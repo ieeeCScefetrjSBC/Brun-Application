@@ -30,6 +30,7 @@ public class FeedbackActivity extends AppCompatActivity { //Activity para mostra
             public void onClick(View v) {
                 Intent int_quiz= new Intent(FeedbackActivity.this, SubjectsActivity.class);
                 startActivity(int_quiz);
+                finish();
             }
         });
 

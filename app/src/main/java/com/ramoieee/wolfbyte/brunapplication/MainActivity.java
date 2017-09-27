@@ -1,7 +1,6 @@
 package com.ramoieee.wolfbyte.brunapplication;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,29 +11,27 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
-    private Button button_study_activitiestest;
-=======
+
+    Button button_quiz;
+
     Button button_settings;
     TextView view_welcome_text;
 
->>>>>>> master
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
-        button_study_activitiestest = (Button) findViewById(R.id.button_study_activities);
 
-=======
+        button_quiz = (Button) findViewById(R.id.button_quiz);
+
+
         button_settings = (Button) findViewById(R.id.button_user_settings);
         view_welcome_text = (TextView)findViewById(R.id.text_welcome);
->>>>>>> master
+
         // #########################
         // CHECKS IF USER IS ALREADY SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -46,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             view_welcome_text.setText("Olá, "+ user.getDisplayName());
         }
-<<<<<<< HEAD
-        button_study_activitiestest.setOnClickListener(new View.OnClickListener(){
+
+        button_quiz.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent quizAct = new Intent(MainActivity.this, QuizActivity.class);
-                startActivity(quizAct);
+                Intent int_subject = new Intent(MainActivity.this, SubjectsActivity.class);
+                startActivity(int_subject);
                 finish();
             }
         });
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart(){
         super.onStart();
-=======
+
         // ##########################
 
 //        // TODO: REMOVE THIS BLOCK AFTER TESTING
@@ -81,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(int_UserSettings);
             }
         });
->>>>>>> master
+
 
     }
 
