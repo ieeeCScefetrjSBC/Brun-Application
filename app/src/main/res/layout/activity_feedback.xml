@@ -17,7 +17,7 @@
         android:textSize="24sp"/>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/certas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -26,12 +26,21 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/erradas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Erros:"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Pontuação:"
         android:textSize="24sp" />
 
     <Button

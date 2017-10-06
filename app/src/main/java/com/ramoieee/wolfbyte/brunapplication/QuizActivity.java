@@ -11,18 +11,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-
 public class QuizActivity extends AppCompatActivity {
-    //public static final String PREFS_NAME = "MyPrefsFile";
 
     private Button button_altA, button_altB, button_altC, button_altD, button_altE;
     private TextView text_enunciado;
 
     String enunciado, altA, altB, altC, altD, altE, gabarito;
-    public int answerCount = 0;
+    public int answerCount = 0; //Variavel que contabiliza os acertos
 
     DatabaseReference questionRef;
-    ArrayList arrayChildren = new ArrayList(); //Array para colocar todas as perguntas e suas alternativas/gabarito
+    ArrayList arrayChildren = new ArrayList(); //ArrayList para colocar todas as perguntas e suas alternativas/gabarito
     Long numberOfChildren; //Váriavel pra colocar quantas questões tem
     public int ind; //Váriavel para saber a pergunta de qual indice puxar do array
     String intentValores = "";
@@ -37,7 +35,9 @@ public class QuizActivity extends AppCompatActivity {
         this.numberOfChildren = numberOfChildren; //método para mudar o valor do setNumberOfChildren em qualquer lugar da classe
     }
     public void ExibirPergunta(int index){ //Método para exibir as perguntas
-        if(index < numberOfChildren) {
+        System.out.println(arrayChildren);
+        System.out.println("indice: " + ind);
+        if(index < numberOfChildren - 1) {
             Questions ques = (Questions) arrayChildren.get(index);
             enunciado = ques.enunciado;
             altA = ques.altA;
@@ -53,36 +53,16 @@ public class QuizActivity extends AppCompatActivity {
             button_altD.setText(altD);
             button_altE.setText(altE); //Acrescentei a alternativa E, que não tinha antes
         }
-        else{ //Se o index for igual ao número de perguntas, é porque chegou ao final e passa pra activity das matérias (provisório)
+        else{ //Se o index for igual ao número de perguntas menos 1, é porque chegou ao final e passa pra activity das matérias (provisório)
             setInd(0);
-            SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-            SharedPreferences.Editor editor = pref.edit();
-            editor.putInt("key_name2", 0);
-            editor.commit();
             Intent int_feedback = new Intent(QuizActivity.this, FeedbackActivity.class);
             intentValores = answerCount + "#" + numberOfChildren; //A quantidade de acertos vai para uma string junto com o numero de perguntas.
             //Exemplo: 2#8 <- isso indica que a pessoa acertou 2 e tem 8 questões, na outra activity isso é separado.
+            System.out.println(intentValores);
             int_feedback.putExtra("Value", intentValores); //String é passada para a outra activity
             startActivity(int_feedback);
         }
     }
-
-    public void continuarParou(){
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-        int parou = pref.getInt("key_name2", 0);
-        if(parou == 0){ //Se o valor salvo em parou for zero, é porque o usuário ainda não fez o quiz ou está refazendo (por enquanto é possivel)
-            System.out.println("entrou");
-            Collections.shuffle(arrayChildren);
-            setAnswerCount(0); //Faz o answerCount ser 0, provisório
-            setInd(0);//Faz o ind ser 0, provisório
-            ExibirPergunta(ind);
-        }
-        else{ //Caso o usuário tenha saido do aplicativo no meio das perguntas, irá setar o indice onde parou
-            setInd(parou);
-            ExibirPergunta(ind);
-        }
-    }
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
@@ -107,8 +87,10 @@ public class QuizActivity extends AppCompatActivity {
                 setNumberOfChildren(dataSnapshot.getChildrenCount());//Pega o número de questões
                 for (DataSnapshot itemSnapshot2 : dataSnapshot.getChildren()) {
                     arrayChildren.add(itemSnapshot2.getValue(Questions.class)); //adiciona cada questão no array
+                    System.out.println(arrayChildren);
                 }
-                continuarParou();
+                System.out.println(arrayChildren);
+                ExibirPergunta(ind);
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -121,13 +103,13 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) { /*se clicar no 1º botão, vê se a resposta está certa, incrementa a variavel answerCount e chama
                 a função ExibirPergunta novamente, mas passando o índice incrementado para q exiba a próxima.  */
+                System.out.println("indice: " + ind);
                 Questions t = (Questions) arrayChildren.get(ind);
                 String gab = t.gabarito; //Coloca o gabarito na variável gab, não tava certo fazendo direto então coloquei na variável
                 if (gab.equals("altA")) {
                     setAnswerCount(answerCount+1);
                     System.out.println(answerCount); //debug
                 }
-                arrayChildren.remove(ind);
                 setInd(ind+1); //aumenta o índice
                 ExibirPergunta(ind);
             }
@@ -137,6 +119,7 @@ public class QuizActivity extends AppCompatActivity {
         button_altB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("indice: " + ind);
                 Questions t = (Questions) arrayChildren.get(ind);
                 String gab = t.gabarito;
                 if (gab.equals("altB")) {
@@ -150,6 +133,7 @@ public class QuizActivity extends AppCompatActivity {
         button_altC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("indice: " + ind);
                 Questions t = (Questions) arrayChildren.get(ind);
                 String gab = t.gabarito;
                 if (gab.equals("altC")) {
@@ -163,6 +147,7 @@ public class QuizActivity extends AppCompatActivity {
         button_altD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("indice: " + ind);
                 Questions t = (Questions) arrayChildren.get(ind);
                 String gab = t.gabarito;
                 if (gab.equals("altD")) {
@@ -176,6 +161,7 @@ public class QuizActivity extends AppCompatActivity {
         button_altE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("indice: " + ind);
                 Questions t = (Questions) arrayChildren.get(ind);
                 String gab = t.gabarito;
                 if (gab.equals("altE")) {
@@ -187,14 +173,5 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-    };;
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("key_name2", ind);
-        editor.commit();
     }
 }
