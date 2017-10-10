@@ -26,7 +26,8 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".UserSettingsActivity" />
         <activity android:name=".SubjectsActivity" />
-        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".FeedbackActivity"></activity>
     </application>
 
 </manifest>
