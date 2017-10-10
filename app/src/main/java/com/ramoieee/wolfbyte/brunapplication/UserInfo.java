@@ -1,26 +1,21 @@
 package com.ramoieee.wolfbyte.brunapplication;
 
-public class UserInfo {
+class UserInfo {
 
-    public String Year;
-    public String Birth;
-    public String Gender;
-    public String Matricula;
-    public String fav_area;
+    String year;
+    String birth;
+    String gender;
+    String student_id;
+    String fav_area;
+    String institution;
 
-    public UserInfo (String Year, String Birth, String Gender, String Matricula, String fav_area) {
-        this.Year = Year;
-        this.Birth = Birth;
-        this.Gender = Gender;
-        this.Matricula = Matricula;
-        this.fav_area = fav_area;
-    }
 
-    public UserInfo (){
-        this.Year = null;
-        this.Birth = null;
-        this.Gender = null;
-        this.Matricula = null;
+    UserInfo (){
+        this.year = null;
+        this.birth = null;
+        this.gender = null;
+        this.student_id = null;
         this.fav_area = null;
+        this.institution = null;
     }
 }

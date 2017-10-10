@@ -58,4 +58,11 @@
         android:text="altD"
         android:layout_weight="0.5"
         android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/button_altE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="altE"
+        android:layout_weight="0.5"
+        android:textAllCaps="false"/>
 </LinearLayout>

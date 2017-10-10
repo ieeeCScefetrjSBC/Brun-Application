@@ -30,22 +30,42 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Matéria Exemplo:"
-                android:textAllCaps="true"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle" />
+                android:text="Disciplina:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
 
-            <Button
-                android:id="@+id/button_subject_example"
+            <Spinner
+                android:id="@+id/spinner_discipline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+
+                android:entries="@array/discipline_arrays"
+                android:prompt="@string/discipline_prompt"
+                android:spinnerMode="dialog" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="Conteudo Exemplo"
-                android:textColor="#CC8100"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
+                android:text="Assunto:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+            <Spinner
+                android:id="@+id/spinner_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+
+                android:prompt="@string/subject_prompt"
+                android:spinnerMode="dialog"/>
+
+            <Button
+                android:id="@+id/button_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecionar"
+                android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
     </ScrollView>
