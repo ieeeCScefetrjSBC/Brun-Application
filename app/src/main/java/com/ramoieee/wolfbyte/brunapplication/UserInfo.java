@@ -8,6 +8,7 @@ class UserInfo {
     String student_id;
     String fav_area;
     String institution;
+    String bonus_time;
 
 
     UserInfo (){
@@ -17,5 +18,6 @@ class UserInfo {
         this.student_id = null;
         this.fav_area = null;
         this.institution = null;
+        this.bonus_time = null;
     }
 }

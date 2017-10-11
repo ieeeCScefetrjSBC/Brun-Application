@@ -93,6 +93,18 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:text="No ID"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
+        <TextView android:id="@+id/view_userBonustime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No bonus time"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userBonustime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No bonus time"
+            android:visibility="gone"/>
+
         <Button android:id="@+id/button_edit_user_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

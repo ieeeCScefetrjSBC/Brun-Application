@@ -35,8 +35,8 @@ public class UserSettingsActivity extends AppCompatActivity {
     private static final String TAG = "UserSettingsActivity";
 
     Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
-    private TextView view_userName, view_userEmail, view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea;
-    private EditText edit_userName, edit_userEmail, edit_userBirth, edit_userYear, edit_userMatricula, edit_userFavArea;
+    private TextView view_userName, view_userEmail, view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea, view_userBonustime;
+    private EditText edit_userName, edit_userEmail, edit_userBirth, edit_userYear, edit_userMatricula, edit_userFavArea, edit_userBonustime;
 
     UserInfo myUser = new UserInfo();
 
@@ -60,6 +60,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         view_userYear = (TextView) findViewById(R.id.view_userYear);
         view_userMatricula = (TextView) findViewById(R.id.view_userMatricula);
         view_userFavArea = (TextView) findViewById(R.id.view_userFavArea);
+        view_userBonustime = (TextView) findViewById(R.id.view_userBonustime);
 
         // EDIT TEXTS
         edit_userName = (EditText)findViewById(R.id.edit_userName);
@@ -68,6 +69,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         edit_userYear = (EditText)findViewById(R.id.edit_userYear);
         edit_userFavArea = (EditText)findViewById(R.id.edit_userFavArea);
         edit_userMatricula = (EditText)findViewById(R.id.edit_userMatricula);
+        edit_userBonustime = (EditText) findViewById(R.id.edit_userBonustime);
 
         UpdateFields();
 
@@ -108,6 +110,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 view_userYear.setVisibility(View.VISIBLE);
                 view_userMatricula.setVisibility(View.VISIBLE);
                 view_userFavArea.setVisibility(View.VISIBLE);
+                view_userBonustime.setVisibility(View.VISIBLE);
 
                 // HIDE EDIT TEXT
                 edit_userName.setVisibility(View.GONE);
@@ -116,6 +119,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 edit_userYear.setVisibility(View.GONE);
                 edit_userMatricula.setVisibility(View.GONE);
                 edit_userFavArea.setVisibility(View.GONE);
+                edit_userBonustime.setVisibility(View.GONE);
 
                 UpdateFields();
             }
@@ -146,6 +150,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 
                 myUser.fav_area = edit_userFavArea.getText().toString();
                 myUser.birth = edit_userBirth.getText().toString();
+                myUser.bonus_time = edit_userBonustime.getText().toString();
 
                 myRef.child(user.getUid()).setValue(myUser);
 
@@ -160,6 +165,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 view_userYear.setVisibility(View.VISIBLE);
                 view_userMatricula.setVisibility(View.VISIBLE);
                 view_userFavArea.setVisibility(View.VISIBLE);
+                view_userBonustime.setVisibility(View.VISIBLE);
 
                 // HIDE EDIT TEXT
                 edit_userName.setVisibility(View.GONE);
@@ -168,6 +174,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 edit_userYear.setVisibility(View.GONE);
                 edit_userMatricula.setVisibility(View.GONE);
                 edit_userFavArea.setVisibility(View.GONE);
+                edit_userBonustime.setVisibility(View.GONE);
 
                 UpdateFields();
 
@@ -197,6 +204,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         view_userYear.setVisibility(View.GONE);
         view_userMatricula.setVisibility(View.GONE);
         view_userFavArea.setVisibility(View.GONE);
+        view_userBonustime.setVisibility(View.GONE);
 
         // SHOW EDIT TEXT
         edit_userName.setVisibility(View.VISIBLE);
@@ -209,6 +217,8 @@ public class UserSettingsActivity extends AppCompatActivity {
         edit_userMatricula.setText(myUser.student_id);
         edit_userFavArea.setVisibility(View.VISIBLE);
         edit_userFavArea.setText(myUser.fav_area);
+        edit_userBonustime.setVisibility(View.VISIBLE);
+        edit_userBonustime.setText(myUser.bonus_time);
 
     }
 
@@ -239,6 +249,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                         view_userYear.setText(myUser.year);
                         view_userFavArea.setText(myUser.fav_area);
                         view_userMatricula.setText(myUser.student_id);
+                        view_userBonustime.setText(myUser.bonus_time);
                     }
                 }
 
