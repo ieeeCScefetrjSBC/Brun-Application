@@ -38,6 +38,18 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:text="No e-mail"
             android:visibility="gone"/>
 
+        <TextView android:id="@+id/view_userBonustime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No bonus time"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userBonustime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No bonus time"
+            android:visibility="gone"/>
+
         <TextView android:id="@+id/view_userBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,18 +60,6 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No birthdate"
-            android:visibility="gone"/>
-
-        <TextView android:id="@+id/view_userYear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No year specified"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-        <EditText android:id="@+id/edit_userYear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No year specified"
             android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userMatricula"
@@ -74,6 +74,18 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:text="No number"
             android:visibility="gone"/>
 
+        <TextView android:id="@+id/view_userYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No year specified"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <EditText android:id="@+id/edit_userYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No year specified"
+            android:visibility="gone"/>
+
         <TextView android:id="@+id/view_userFavArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,24 +98,6 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:text="No favorite area"
             android:visibility="gone"/>
 
-
-        <TextView android:id="@+id/view_userID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No ID"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-        <TextView android:id="@+id/view_userBonustime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No bonus time"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
-
-        <EditText android:id="@+id/edit_userBonustime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No bonus time"
-            android:visibility="gone"/>
 
         <Button android:id="@+id/button_edit_user_info"
             android:layout_width="match_parent"
