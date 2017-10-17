@@ -232,10 +232,16 @@ public class UserSettingsActivity extends AppCompatActivity {
             String email = user.getEmail();
             // Uri photoUrl = user.getPhotoUrl()
             String uid = user.getUid();
+            String institution = getIntent().getExtras().getString("institution");
 
             // Updates user information fields
             view_userName.setText(name);
             view_userEmail.setText(email);
+            if(institution.equals("BRUN@ALUNO")){
+                view_userInstitution.setText("Brun Ensino Personalizado");
+            }else if(institution.equals("ROMANOS@ALUNO")){
+                view_userInstitution.setText("Romanos Preparatório Militar");
+            }
             //view_userID.setText(uid);
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
