@@ -35,7 +35,7 @@ public class UserSettingsActivity extends AppCompatActivity {
     private static final String TAG = "UserSettingsActivity";
 
     Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
-    private TextView view_userName, view_userEmail, view_userBonustime; //view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea;
+    private TextView view_userName, view_userEmail, view_userBonustime, view_userInstitution; //view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea;
     private EditText edit_userName, edit_userEmail, edit_userBirth, edit_userYear, edit_userMatricula, edit_userFavArea, edit_userBonustime;
 
     UserInfo myUser = new UserInfo();
@@ -61,6 +61,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 //        view_userMatricula = (TextView) findViewById(R.id.view_userMatricula);
 //        view_userFavArea = (TextView) findViewById(R.id.view_userFavArea);
         view_userBonustime = (TextView) findViewById(R.id.view_userBonustime);
+        view_userInstitution = (TextView) findViewById(R.id.view_userInstitution);
 
         // EDIT TEXTS
         edit_userName = (EditText)findViewById(R.id.edit_userName);

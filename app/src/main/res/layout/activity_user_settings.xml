@@ -24,6 +24,7 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No Name"
+            android:maxLines="1"
             android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userEmail"
@@ -36,6 +37,7 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No e-mail"
+            android:maxLines="1"
             android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userBonustime"
@@ -48,54 +50,69 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No bonus time"
+            android:inputType="time"
             android:visibility="gone"/>
+
+        <TextView android:id="@+id/view_userInstitution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No institution"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <TextView android:id="@+id/view_userBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No birthdate"
+            android:visibility="gone"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <EditText android:id="@+id/edit_userBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No birthdate"
+            android:maxLines="1"
             android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userMatricula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No number"
+            android:visibility="gone"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <EditText android:id="@+id/edit_userMatricula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No number"
+            android:maxLines="1"
             android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No year specified"
+            android:visibility="gone"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <EditText android:id="@+id/edit_userYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No year specified"
+            android:maxLines="1"
             android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userFavArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No favorite area"
+            android:visibility="gone"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <EditText android:id="@+id/edit_userFavArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No favorite area"
+            android:maxLines="1"
             android:visibility="gone"/>
 
 
