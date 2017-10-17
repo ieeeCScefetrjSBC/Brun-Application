@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
     Button button_signIn, button_forgotPassword;
-    private EditText field_email, field_password;
+    private EditText field_email, field_password, field_code;
 
     private FirebaseAuth Auth;
     private FirebaseAuth.AuthStateListener AuthListener;
@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         button_forgotPassword = (Button)findViewById(R.id.button_forgot_pass);
         field_email = (EditText)findViewById(R.id.field_email);
         field_password = (EditText)findViewById(R.id.field_password);
+        field_code = (EditText)findViewById(R.id.field_code);
 
         // Authentication Instance
         Auth = FirebaseAuth.getInstance();
@@ -65,9 +66,16 @@ public class LoginActivity extends AppCompatActivity {
         button_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signInUser(field_email.getText().toString(), field_password.getText().toString());
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                checkUserData(user);
+                String code = field_code.getText().toString();
+                if(code.equals("BRUN@ALUNO")||code.equals("ROMANOS@ALUNO")){
+                    signInUser(field_email.getText().toString(), field_password.getText().toString());
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    checkUserData(user);
+                }else{
+                    Toast.makeText(LoginActivity.this, "Código inserido é inválido",
+                            Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });
@@ -129,6 +137,8 @@ public class LoginActivity extends AppCompatActivity {
             Uri photoUrl = user.getPhotoUrl();
             if(name == null && photoUrl == null){
                 Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
+                String code = field_code.getText().toString();
+                int_UserSettings.putExtra("institution", code);
                 startActivity(int_UserSettings);
                 finish();
             }else{

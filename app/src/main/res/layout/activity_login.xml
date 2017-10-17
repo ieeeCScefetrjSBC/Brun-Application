@@ -44,7 +44,16 @@
                     android:hint="@string/prompt_password"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:layout_marginBottom="40dp"/>
+                    android:layout_marginBottom="20dp"/>
+
+                <EditText
+                    android:id="@+id/field_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Código da Instituição"
+                    android:layout_marginBottom="20dp"
+                    android:maxLines="1"/>
 
                 <Button
                     android:id="@+id/button_sign_in"
@@ -61,5 +70,6 @@
         android:background="@android:color/transparent"
         android:text="@string/forgot_pass"
         android:textAllCaps="false"
+        android:visibility="gone"
         />
     </LinearLayout>
