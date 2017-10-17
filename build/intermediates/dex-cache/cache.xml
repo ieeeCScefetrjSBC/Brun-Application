@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f05a70b156ee8482507ffb37297056968a83b3e9\classes.dex" />
+        <dex dex="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_379ca8efa2a9f1024a0a3b818e9858dd55ef1332/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="19fd1392958ca0c01d2747605d1f79494c408a21">
-        <dex dex="C:\Users\thain\Documents\GitHub\Brun-Application\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f96d2f626d802339ef643b728ebfad172fb89edd\classes.dex" />
+        sha1="0e2a83a97cf11a806662bebfc59a125e6efa215d">
+        <dex dex="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_aecb53d52cfa625bdb1bd098d46aa5022ead2e05/classes.dex" />
     </item>
 
 </items>
