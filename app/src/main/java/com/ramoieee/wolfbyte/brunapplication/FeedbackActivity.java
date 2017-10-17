@@ -82,6 +82,10 @@ public class FeedbackActivity extends AppCompatActivity { //Activity para mostra
 
             }
 
+            /**
+             * ADICIONAR AQUI A GRAVAÇÃO DA PONTUAÇÃO NA BASE DE DADOS
+             * **/
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
