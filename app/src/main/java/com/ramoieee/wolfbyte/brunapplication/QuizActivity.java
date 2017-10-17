@@ -90,6 +90,7 @@ public class QuizActivity extends AppCompatActivity {
                     System.out.println(arrayChildren);
                 }
                 System.out.println(arrayChildren);
+                Collections.shuffle(arrayChildren);
                 ExibirPergunta(ind);
             }
             @Override

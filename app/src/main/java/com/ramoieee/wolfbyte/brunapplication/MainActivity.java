@@ -14,9 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button_quiz;
-
-    Button button_settings;
+    Button button_quiz, button_settings;
     TextView view_welcome_text;
 
 
@@ -30,21 +28,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         button_settings = (Button) findViewById(R.id.button_user_settings);
-        view_welcome_text = (TextView)findViewById(R.id.text_welcome);
+        view_welcome_text = (TextView) findViewById(R.id.text_welcome);
 
         // #########################
         // CHECKS IF USER IS ALREADY SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user == null){
+        if (user == null) {
             Intent int_SignIn = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(int_SignIn);
-        }else {
-            Toast.makeText(MainActivity.this, "A user is already logged in",
+            finish();
+        } else {
+            Toast.makeText(MainActivity.this, "Usuário conectado",
                     Toast.LENGTH_SHORT).show();
-            view_welcome_text.setText("Olá, "+ user.getDisplayName());
+            view_welcome_text.setText("Olá, " + user.getDisplayName());
         }
 
-        button_quiz.setOnClickListener(new View.OnClickListener(){
+        button_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent int_subject = new Intent(MainActivity.this, SubjectsActivity.class);
@@ -52,24 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-
-
-
-    @Override
-    public void onStart(){
-        super.onStart();
-
-        // ##########################
-
-//        // TODO: REMOVE THIS BLOCK AFTER TESTING
-//        if(user != null){
-//            Toast.makeText(MainActivity.this, "A user is already logged in",
-//                    Toast.LENGTH_SHORT).show();
-//            Intent int_UserSettings = new Intent(MainActivity.this, UserSettingsActivity.class);
-//            startActivity(int_UserSettings);
-//        }
-//        // ##########################
 
         button_settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,52 +59,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(int_UserSettings);
             }
         });
-
-
-    }
-
-//    @Override
-//    public void onStart(){
-//        super.onStart();
-//
-//        // #########################
-//        // CHECKS IF USER IS STILL SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        if(user == null){
-//            Toast.makeText(MainActivity.this, "You need to be logged in to access our app features",
-//                    Toast.LENGTH_SHORT).show();
-//            Intent int_SignIn = new Intent(MainActivity.this, LoginActivity.class);
-//            startActivity(int_SignIn);
-//        }
-//        // ##########################
-//    }
-    @Override
-    public void onPause(){
-        super.onPause();
-    }
-
-    @Override
-    public void onResume(){
-        super.onResume();
-
-        // #########################
-        // CHECKS IF USER IS STILL SIGNED IN. IF NOT, CALLS LOGIN ACTIVITY
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user == null){
-            Toast.makeText(MainActivity.this, "You need to be logged in to access our app features",
-                    Toast.LENGTH_SHORT).show();
-            Intent int_SignIn = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(int_SignIn);
-        }else{
-            view_welcome_text.setText("Olá, "+ user.getDisplayName());
-        }
-        // ##########################
-
-    }
-
-
-    @Override
-    public void onStop(){
-        super.onStop();
     }
 }

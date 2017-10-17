@@ -35,7 +35,7 @@ public class UserSettingsActivity extends AppCompatActivity {
     private static final String TAG = "UserSettingsActivity";
 
     Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
-    private TextView view_userName, view_userEmail, view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea, view_userBonustime;
+    private TextView view_userName, view_userEmail, view_userBonustime, view_userInstitution; //view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea;
     private EditText edit_userName, edit_userEmail, edit_userBirth, edit_userYear, edit_userMatricula, edit_userFavArea, edit_userBonustime;
 
     UserInfo myUser = new UserInfo();
@@ -55,12 +55,13 @@ public class UserSettingsActivity extends AppCompatActivity {
         // TEXT VIEWS
         view_userName = (TextView)findViewById(R.id.view_userName);
         view_userEmail = (TextView)findViewById(R.id.view_userEmail);
-        view_userID = (TextView)findViewById(R.id.view_userID);
-        view_userBirth = (TextView) findViewById(R.id.view_userBirth);
-        view_userYear = (TextView) findViewById(R.id.view_userYear);
-        view_userMatricula = (TextView) findViewById(R.id.view_userMatricula);
-        view_userFavArea = (TextView) findViewById(R.id.view_userFavArea);
+//        view_userID = (TextView)findViewById(R.id.view_userID);
+//        view_userBirth = (TextView) findViewById(R.id.view_userBirth);
+//        view_userYear = (TextView) findViewById(R.id.view_userYear);
+//        view_userMatricula = (TextView) findViewById(R.id.view_userMatricula);
+//        view_userFavArea = (TextView) findViewById(R.id.view_userFavArea);
         view_userBonustime = (TextView) findViewById(R.id.view_userBonustime);
+        view_userInstitution = (TextView) findViewById(R.id.view_userInstitution);
 
         // EDIT TEXTS
         edit_userName = (EditText)findViewById(R.id.edit_userName);
@@ -80,7 +81,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 view_userName.setText("blank");
                 view_userEmail.setText("blank");
-                view_userID.setText("blank");
+                //view_userID.setText("blank");
             }
         });
 
@@ -105,11 +106,11 @@ public class UserSettingsActivity extends AppCompatActivity {
                 // SHOW TEXT VIEWS
                 view_userName.setVisibility(View.VISIBLE);
                 view_userEmail.setVisibility(View.VISIBLE);
-                view_userID.setVisibility(View.VISIBLE);
-                view_userBirth.setVisibility(View.VISIBLE);
-                view_userYear.setVisibility(View.VISIBLE);
-                view_userMatricula.setVisibility(View.VISIBLE);
-                view_userFavArea.setVisibility(View.VISIBLE);
+//                view_userID.setVisibility(View.VISIBLE);
+//                view_userBirth.setVisibility(View.VISIBLE);
+//                view_userYear.setVisibility(View.VISIBLE);
+//                view_userMatricula.setVisibility(View.VISIBLE);
+//                view_userFavArea.setVisibility(View.VISIBLE);
                 view_userBonustime.setVisibility(View.VISIBLE);
 
                 // HIDE EDIT TEXT
@@ -160,11 +161,11 @@ public class UserSettingsActivity extends AppCompatActivity {
                 // SHOW TEXT VIEWS
                 view_userName.setVisibility(View.VISIBLE);
                 view_userEmail.setVisibility(View.VISIBLE);
-                view_userID.setVisibility(View.VISIBLE);
-                view_userBirth.setVisibility(View.VISIBLE);
-                view_userYear.setVisibility(View.VISIBLE);
-                view_userMatricula.setVisibility(View.VISIBLE);
-                view_userFavArea.setVisibility(View.VISIBLE);
+//                view_userID.setVisibility(View.VISIBLE);
+//                view_userBirth.setVisibility(View.VISIBLE);
+//                view_userYear.setVisibility(View.VISIBLE);
+//                view_userMatricula.setVisibility(View.VISIBLE);
+//                view_userFavArea.setVisibility(View.VISIBLE);
                 view_userBonustime.setVisibility(View.VISIBLE);
 
                 // HIDE EDIT TEXT
@@ -199,11 +200,11 @@ public class UserSettingsActivity extends AppCompatActivity {
         // HIDE TEXT VIEWS
         view_userName.setVisibility(View.GONE);
         view_userEmail.setVisibility(View.GONE);
-        view_userID.setVisibility(View.GONE);
-        view_userBirth.setVisibility(View.GONE);
-        view_userYear.setVisibility(View.GONE);
-        view_userMatricula.setVisibility(View.GONE);
-        view_userFavArea.setVisibility(View.GONE);
+//        view_userID.setVisibility(View.GONE);
+//        view_userBirth.setVisibility(View.GONE);
+//        view_userYear.setVisibility(View.GONE);
+//        view_userMatricula.setVisibility(View.GONE);
+//        view_userFavArea.setVisibility(View.GONE);
         view_userBonustime.setVisibility(View.GONE);
 
         // SHOW EDIT TEXT
@@ -231,11 +232,17 @@ public class UserSettingsActivity extends AppCompatActivity {
             String email = user.getEmail();
             // Uri photoUrl = user.getPhotoUrl()
             String uid = user.getUid();
+            String institution = getIntent().getExtras().getString("institution");
 
             // Updates user information fields
             view_userName.setText(name);
             view_userEmail.setText(email);
-            view_userID.setText(uid);
+            if(institution.equals("BRUN@ALUNO")){
+                view_userInstitution.setText("Brun Ensino Personalizado");
+            }else if(institution.equals("ROMANOS@ALUNO")){
+                view_userInstitution.setText("Romanos Preparatório Militar");
+            }
+            //view_userID.setText(uid);
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("users");
@@ -245,10 +252,10 @@ public class UserSettingsActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()){
                         myUser = dataSnapshot.getValue(UserInfo.class);
-                        view_userBirth.setText(myUser.birth);
-                        view_userYear.setText(myUser.year);
-                        view_userFavArea.setText(myUser.fav_area);
-                        view_userMatricula.setText(myUser.student_id);
+//                        view_userBirth.setText(myUser.birth);
+//                        view_userYear.setText(myUser.year);
+//                        view_userFavArea.setText(myUser.fav_area);
+//                        view_userMatricula.setText(myUser.student_id);
                         view_userBonustime.setText(myUser.bonus_time);
                     }
                 }

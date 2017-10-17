@@ -1,6 +1,6 @@
 package com.ramoieee.wolfbyte.brunapplication;
 
-class UserInfo {
+public class UserInfo {
 
     String year;
     String birth;
