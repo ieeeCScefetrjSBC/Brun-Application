@@ -23,7 +23,7 @@
                     android:id="@+id/AppLogo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="20dp"
+
                     app:srcCompat="@drawable/gubyamarelo" />
 
                 <EditText
@@ -34,7 +34,16 @@
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+
                     android:layout_marginBottom="10dp"/>
+
+                <ProgressBar
+                    android:id="@+id/indeterminateBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
 
                 <EditText
                     android:id="@+id/field_password"
@@ -45,16 +54,6 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:layout_marginBottom="20dp"/>
-
-                <EditText
-                    android:id="@+id/field_code"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:hint="Código da Instituição"
-                    android:layout_marginBottom="20dp"
-                    android:textAllCaps="true"
-                    android:maxLines="1"/>
 
                 <Button
                     android:id="@+id/button_sign_in"
