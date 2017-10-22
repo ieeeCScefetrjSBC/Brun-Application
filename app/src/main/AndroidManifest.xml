@@ -24,10 +24,14 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".UserSettingsActivity" />
-        <activity android:name=".SubjectsActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".FeedbackActivity"></activity>
+        <activity android:name=".UserSettingsActivity"
+            android:label="Configurações"/>
+        <activity android:name=".SubjectsActivity"
+            android:label="Seleção de listas"/>
+        <activity android:name=".QuizActivity"
+            android:label="Quiz"/>
+        <activity android:name=".FeedbackActivity"
+            android:label="Resultado final"></activity>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@
 
 package com.ramoieee.wolfbyte.brunapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,9 +36,9 @@ public class UserSettingsActivity extends AppCompatActivity {
 
     private static final String TAG = "UserSettingsActivity";
 
-    Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
-    private TextView view_userName, view_userEmail, view_userBonustime, view_userInstitution; //view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea;
-    private EditText edit_userName, edit_userEmail, edit_userBirth, edit_userYear, edit_userMatricula, edit_userFavArea, edit_userBonustime;
+    Button button_edit_user_info, button_sign_out, button_back_main;
+    private TextView view_userName, view_userEmail, view_userBonustime, view_userInstitution; //view_userID, view_userBirth, view_userYear, view_userStudentId, view_userFavArea;
+    private EditText edit_userName, edit_userEmail, edit_userFavArea, edit_userBonustime;
 
     UserInfo myUser = new UserInfo();
 
@@ -44,12 +46,10 @@ public class UserSettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_settings);
-        
+
         // BUTTONS
         button_edit_user_info = (Button)findViewById(R.id.button_edit_user_info);
         button_sign_out = (Button)findViewById(R.id.button_sign_out);
-        button_save_user_info = (Button)findViewById(R.id.button_save_user_info);
-        button_cancel_edit = (Button)findViewById(R.id.button_cancel_edit);
         button_back_main = (Button)findViewById(R.id.button_back_main);
         
         // TEXT VIEWS
@@ -58,7 +58,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 //        view_userID = (TextView)findViewById(R.id.view_userID);
 //        view_userBirth = (TextView) findViewById(R.id.view_userBirth);
 //        view_userYear = (TextView) findViewById(R.id.view_userYear);
-//        view_userMatricula = (TextView) findViewById(R.id.view_userMatricula);
+//        view_userStudentId = (TextView) findViewById(R.id.view_userStudentId);
 //        view_userFavArea = (TextView) findViewById(R.id.view_userFavArea);
         view_userBonustime = (TextView) findViewById(R.id.view_userBonustime);
         view_userInstitution = (TextView) findViewById(R.id.view_userInstitution);
@@ -66,10 +66,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         // EDIT TEXTS
         edit_userName = (EditText)findViewById(R.id.edit_userName);
         edit_userEmail = (EditText)findViewById(R.id.edit_userEmail);
-        edit_userBirth = (EditText)findViewById(R.id.edit_userBirth);
-        edit_userYear = (EditText)findViewById(R.id.edit_userYear);
         edit_userFavArea = (EditText)findViewById(R.id.edit_userFavArea);
-        edit_userMatricula = (EditText)findViewById(R.id.edit_userMatricula);
         edit_userBonustime = (EditText) findViewById(R.id.edit_userBonustime);
 
         UpdateFields();
@@ -89,95 +86,6 @@ public class UserSettingsActivity extends AppCompatActivity {
         button_edit_user_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                button_cancel_edit.setVisibility(View.VISIBLE);
-                button_save_user_info.setVisibility(View.VISIBLE);
-                button_edit_user_info.setVisibility(View.GONE);
-                editUserInfo();
-            }
-        });
-
-
-        button_cancel_edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                button_cancel_edit.setVisibility(View.GONE);
-                button_save_user_info.setVisibility(View.GONE);
-                button_edit_user_info.setVisibility(View.VISIBLE);
-                // SHOW TEXT VIEWS
-                view_userName.setVisibility(View.VISIBLE);
-                view_userEmail.setVisibility(View.VISIBLE);
-//                view_userID.setVisibility(View.VISIBLE);
-//                view_userBirth.setVisibility(View.VISIBLE);
-//                view_userYear.setVisibility(View.VISIBLE);
-//                view_userMatricula.setVisibility(View.VISIBLE);
-//                view_userFavArea.setVisibility(View.VISIBLE);
-                view_userBonustime.setVisibility(View.VISIBLE);
-
-                // HIDE EDIT TEXT
-                edit_userName.setVisibility(View.GONE);
-                edit_userEmail.setVisibility(View.GONE);
-                edit_userBirth.setVisibility(View.GONE);
-                edit_userYear.setVisibility(View.GONE);
-                edit_userMatricula.setVisibility(View.GONE);
-                edit_userFavArea.setVisibility(View.GONE);
-                edit_userBonustime.setVisibility(View.GONE);
-
-                UpdateFields();
-            }
-        });
-
-        button_save_user_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-                UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                        .setDisplayName(edit_userName.getText().toString())
-                        .build();
-
-                user.updateProfile(profileUpdates)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Log.d(TAG, "User profile updated.");
-                                }
-                            }
-                        });
-
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("users");
-
-                myUser.fav_area = edit_userFavArea.getText().toString();
-                myUser.birth = edit_userBirth.getText().toString();
-                myUser.bonus_time = edit_userBonustime.getText().toString();
-
-                myRef.child(user.getUid()).setValue(myUser);
-
-                button_cancel_edit.setVisibility(View.GONE);
-                button_save_user_info.setVisibility(View.GONE);
-                button_edit_user_info.setVisibility(View.VISIBLE);
-                // SHOW TEXT VIEWS
-                view_userName.setVisibility(View.VISIBLE);
-                view_userEmail.setVisibility(View.VISIBLE);
-//                view_userID.setVisibility(View.VISIBLE);
-//                view_userBirth.setVisibility(View.VISIBLE);
-//                view_userYear.setVisibility(View.VISIBLE);
-//                view_userMatricula.setVisibility(View.VISIBLE);
-//                view_userFavArea.setVisibility(View.VISIBLE);
-                view_userBonustime.setVisibility(View.VISIBLE);
-
-                // HIDE EDIT TEXT
-                edit_userName.setVisibility(View.GONE);
-                edit_userEmail.setVisibility(View.GONE);
-                edit_userBirth.setVisibility(View.GONE);
-                edit_userYear.setVisibility(View.GONE);
-                edit_userMatricula.setVisibility(View.GONE);
-                edit_userFavArea.setVisibility(View.GONE);
-                edit_userBonustime.setVisibility(View.GONE);
-
-                UpdateFields();
 
             }
         });
@@ -185,42 +93,11 @@ public class UserSettingsActivity extends AppCompatActivity {
         button_back_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent int_Main = new Intent(UserSettingsActivity.this, MainActivity.class);
+                startActivity(int_Main);
                 finish();
             }
         });
-    }
-
-
-    protected void editUserInfo(){
-        System.out.println(TAG + "editUserInfo method called");
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        // Name, email address, profile photo Url and user ID number
-        String name = user.getDisplayName();
-
-        // HIDE TEXT VIEWS
-        view_userName.setVisibility(View.GONE);
-        view_userEmail.setVisibility(View.GONE);
-//        view_userID.setVisibility(View.GONE);
-//        view_userBirth.setVisibility(View.GONE);
-//        view_userYear.setVisibility(View.GONE);
-//        view_userMatricula.setVisibility(View.GONE);
-//        view_userFavArea.setVisibility(View.GONE);
-        view_userBonustime.setVisibility(View.GONE);
-
-        // SHOW EDIT TEXT
-        edit_userName.setVisibility(View.VISIBLE);
-        edit_userName.setText(name);
-        edit_userBirth.setVisibility(View.VISIBLE);
-        edit_userBirth.setText(myUser.birth);
-        edit_userYear.setVisibility(View.VISIBLE);
-        edit_userYear.setText(myUser.year);
-        edit_userMatricula.setVisibility(View.VISIBLE);
-        edit_userMatricula.setText(myUser.student_id);
-        edit_userFavArea.setVisibility(View.VISIBLE);
-        edit_userFavArea.setText(myUser.fav_area);
-        edit_userBonustime.setVisibility(View.VISIBLE);
-        edit_userBonustime.setText(myUser.bonus_time);
-
     }
 
     protected void UpdateFields(){
@@ -230,18 +107,10 @@ public class UserSettingsActivity extends AppCompatActivity {
             // Name, email address, and profile photo Url
             String name = user.getDisplayName();
             String email = user.getEmail();
-            // Uri photoUrl = user.getPhotoUrl()
-            String uid = user.getUid();
-            String institution = getIntent().getExtras().getString("institution");
 
             // Updates user information fields
             view_userName.setText(name);
             view_userEmail.setText(email);
-            if(institution.equals("BRUN@ALUNO")){
-                view_userInstitution.setText("Brun Ensino Personalizado");
-            }else if(institution.equals("ROMANOS@ALUNO")){
-                view_userInstitution.setText("Romanos Preparatório Militar");
-            }
             //view_userID.setText(uid);
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -253,10 +122,11 @@ public class UserSettingsActivity extends AppCompatActivity {
                     if (dataSnapshot.exists()){
                         myUser = dataSnapshot.getValue(UserInfo.class);
 //                        view_userBirth.setText(myUser.birth);
-//                        view_userYear.setText(myUser.year);
+//                        view_userYear.setText(myUser.yearclass);
 //                        view_userFavArea.setText(myUser.fav_area);
-//                        view_userMatricula.setText(myUser.student_id);
+//                        view_userStudentId.setText(myUser.student_id);
                         view_userBonustime.setText(myUser.bonus_time);
+                        view_userInstitution.setText(myUser.institution);
                     }
                 }
 
@@ -266,10 +136,6 @@ public class UserSettingsActivity extends AppCompatActivity {
                 }
             });
         }
-//        else{
-//            Intent int_SignIn = new Intent(UserSettingsActivity.this, LoginActivity.class);
-//            startActivity(int_SignIn);
-//        }
 
     }
 }

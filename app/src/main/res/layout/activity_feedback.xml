@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="25dp"
         android:text="Você terminou o quiz. Seus resultados:"
         android:textSize="24sp"/>
 
@@ -45,9 +45,10 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:layout_gravity="center"
         android:text="Voltar para o menu" />
 
 </LinearLayout>

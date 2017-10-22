@@ -8,7 +8,8 @@ android:layout_margin="@dimen/activity_horizontal_margin"
 tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="0dp"
+    android:layout_weight="1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,13 +34,6 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:text="No e-mail"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-        <EditText android:id="@+id/edit_userEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No e-mail"
-            android:maxLines="1"
-            android:visibility="gone"/>
-
         <TextView android:id="@+id/view_userBonustime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,6 +47,12 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:inputType="time"
             android:visibility="gone"/>
 
+        <TextView android:id="@+id/view_userCredential"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No credential"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
         <TextView android:id="@+id/view_userInstitution"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,49 +63,31 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No birthdate"
-            android:visibility="gone"
+
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-        <EditText android:id="@+id/edit_userBirth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No birthdate"
-            android:maxLines="1"
-            android:visibility="gone"/>
 
-        <TextView android:id="@+id/view_userMatricula"
+        <TextView android:id="@+id/view_userStudentId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No number"
-            android:visibility="gone"
+
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-        <EditText android:id="@+id/edit_userMatricula"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No number"
-            android:maxLines="1"
-            android:visibility="gone"/>
 
-        <TextView android:id="@+id/view_userYear"
+        <TextView android:id="@+id/view_userYearClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No year specified"
-            android:visibility="gone"
+
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
-        <EditText android:id="@+id/edit_userYear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No year specified"
-            android:maxLines="1"
-            android:visibility="gone"/>
 
         <TextView android:id="@+id/view_userFavArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No favorite area"
-            android:visibility="gone"
+
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         <EditText android:id="@+id/edit_userFavArea"
@@ -122,35 +104,6 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:textAllCaps="false"
             android:text="Editar informações" />
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button android:id="@+id/button_save_user_info"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="Salvar"
-                android:visibility="gone"/>
-
-            <Button android:id="@+id/button_cancel_edit"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textAllCaps="false"
-                android:text="Cancelar"
-                android:visibility="gone"/>
-        </LinearLayout>
-
-        <Button android:id="@+id/button_back_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="Voltar" />
-
         <Button android:id="@+id/button_sign_out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -158,4 +111,11 @@ tools:context="com.ramoieee.wolfbyte.brunapplication.UserSettingsActivity">
             android:text="Desconectar" />
     </LinearLayout>
 </ScrollView>
+
+    <Button android:id="@+id/button_back_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Voltar" />
+
 </LinearLayout>
