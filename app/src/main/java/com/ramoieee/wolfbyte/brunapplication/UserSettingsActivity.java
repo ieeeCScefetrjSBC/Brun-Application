@@ -10,6 +10,7 @@
 
 package com.ramoieee.wolfbyte.brunapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +38,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 
     Button button_edit_user_info, button_sign_out, button_save_user_info, button_cancel_edit, button_back_main;
     private TextView view_userName, view_userEmail, view_userBonustime, view_userInstitution; //view_userID, view_userBirth, view_userYear, view_userMatricula, view_userFavArea;
-    private EditText edit_userName, edit_userEmail, edit_userBirth, edit_userYear, edit_userMatricula, edit_userFavArea, edit_userBonustime;
+    private EditText edit_userName, edit_userEmail, edit_userFavArea, edit_userBonustime;
 
     UserInfo myUser = new UserInfo();
 
@@ -44,7 +46,7 @@ public class UserSettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_settings);
-        
+
         // BUTTONS
         button_edit_user_info = (Button)findViewById(R.id.button_edit_user_info);
         button_sign_out = (Button)findViewById(R.id.button_sign_out);
@@ -66,10 +68,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         // EDIT TEXTS
         edit_userName = (EditText)findViewById(R.id.edit_userName);
         edit_userEmail = (EditText)findViewById(R.id.edit_userEmail);
-        edit_userBirth = (EditText)findViewById(R.id.edit_userBirth);
-        edit_userYear = (EditText)findViewById(R.id.edit_userYear);
         edit_userFavArea = (EditText)findViewById(R.id.edit_userFavArea);
-        edit_userMatricula = (EditText)findViewById(R.id.edit_userMatricula);
         edit_userBonustime = (EditText) findViewById(R.id.edit_userBonustime);
 
         UpdateFields();
@@ -116,9 +115,6 @@ public class UserSettingsActivity extends AppCompatActivity {
                 // HIDE EDIT TEXT
                 edit_userName.setVisibility(View.GONE);
                 edit_userEmail.setVisibility(View.GONE);
-                edit_userBirth.setVisibility(View.GONE);
-                edit_userYear.setVisibility(View.GONE);
-                edit_userMatricula.setVisibility(View.GONE);
                 edit_userFavArea.setVisibility(View.GONE);
                 edit_userBonustime.setVisibility(View.GONE);
 
@@ -150,7 +146,6 @@ public class UserSettingsActivity extends AppCompatActivity {
                 DatabaseReference myRef = database.getReference("users");
 
                 myUser.fav_area = edit_userFavArea.getText().toString();
-                myUser.birth = edit_userBirth.getText().toString();
                 myUser.bonus_time = edit_userBonustime.getText().toString();
 
                 myRef.child(user.getUid()).setValue(myUser);
@@ -167,13 +162,11 @@ public class UserSettingsActivity extends AppCompatActivity {
 //                view_userMatricula.setVisibility(View.VISIBLE);
 //                view_userFavArea.setVisibility(View.VISIBLE);
                 view_userBonustime.setVisibility(View.VISIBLE);
+                view_userInstitution.setVisibility(View.VISIBLE);
 
                 // HIDE EDIT TEXT
                 edit_userName.setVisibility(View.GONE);
                 edit_userEmail.setVisibility(View.GONE);
-                edit_userBirth.setVisibility(View.GONE);
-                edit_userYear.setVisibility(View.GONE);
-                edit_userMatricula.setVisibility(View.GONE);
                 edit_userFavArea.setVisibility(View.GONE);
                 edit_userBonustime.setVisibility(View.GONE);
 
@@ -185,6 +178,8 @@ public class UserSettingsActivity extends AppCompatActivity {
         button_back_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent int_Main = new Intent(UserSettingsActivity.this, MainActivity.class);
+                startActivity(int_Main);
                 finish();
             }
         });
@@ -206,18 +201,19 @@ public class UserSettingsActivity extends AppCompatActivity {
 //        view_userMatricula.setVisibility(View.GONE);
 //        view_userFavArea.setVisibility(View.GONE);
         view_userBonustime.setVisibility(View.GONE);
+        view_userInstitution.setVisibility(View.GONE);
 
         // SHOW EDIT TEXT
         edit_userName.setVisibility(View.VISIBLE);
         edit_userName.setText(name);
-        edit_userBirth.setVisibility(View.VISIBLE);
-        edit_userBirth.setText(myUser.birth);
-        edit_userYear.setVisibility(View.VISIBLE);
-        edit_userYear.setText(myUser.year);
-        edit_userMatricula.setVisibility(View.VISIBLE);
-        edit_userMatricula.setText(myUser.student_id);
-        edit_userFavArea.setVisibility(View.VISIBLE);
-        edit_userFavArea.setText(myUser.fav_area);
+        //edit_userBirth.setVisibility(View.VISIBLE);
+        //edit_userBirth.setText(myUser.birth);
+        //edit_userYear.setVisibility(View.VISIBLE);
+        //edit_userYear.setText(myUser.year);
+        //edit_userMatricula.setVisibility(View.VISIBLE);
+        //edit_userMatricula.setText(myUser.student_id);
+        //edit_userFavArea.setVisibility(View.VISIBLE);
+        //edit_userFavArea.setText(myUser.fav_area);
         edit_userBonustime.setVisibility(View.VISIBLE);
         edit_userBonustime.setText(myUser.bonus_time);
 
@@ -232,16 +228,10 @@ public class UserSettingsActivity extends AppCompatActivity {
             String email = user.getEmail();
             // Uri photoUrl = user.getPhotoUrl()
             String uid = user.getUid();
-            String institution = getIntent().getExtras().getString("institution");
 
             // Updates user information fields
             view_userName.setText(name);
             view_userEmail.setText(email);
-            if(institution.equals("BRUN@ALUNO")){
-                view_userInstitution.setText("Brun Ensino Personalizado");
-            }else if(institution.equals("ROMANOS@ALUNO")){
-                view_userInstitution.setText("Romanos Preparatório Militar");
-            }
             //view_userID.setText(uid);
 
             FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -257,6 +247,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 //                        view_userFavArea.setText(myUser.fav_area);
 //                        view_userMatricula.setText(myUser.student_id);
                         view_userBonustime.setText(myUser.bonus_time);
+                        view_userInstitution.setText(myUser.institution);
                     }
                 }
 
@@ -266,10 +257,6 @@ public class UserSettingsActivity extends AppCompatActivity {
                 }
             });
         }
-//        else{
-//            Intent int_SignIn = new Intent(UserSettingsActivity.this, LoginActivity.class);
-//            startActivity(int_SignIn);
-//        }
 
     }
 }
