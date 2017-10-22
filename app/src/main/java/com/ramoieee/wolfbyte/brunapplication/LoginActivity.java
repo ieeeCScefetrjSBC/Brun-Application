@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;
@@ -24,11 +24,13 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
     Button button_signIn, button_forgotPassword;
-    private EditText field_email, field_password, field_code;
+    private EditText field_email, field_password;
+    ProgressBar indeterminateBar;
 
     private FirebaseAuth Auth;
     private FirebaseAuth.AuthStateListener AuthListener;
     DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +38,12 @@ public class LoginActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // Sign in widgets
+        // Widgets
         button_signIn = (Button)findViewById(R.id.button_sign_in);
         button_forgotPassword = (Button)findViewById(R.id.button_forgot_pass);
         field_email = (EditText)findViewById(R.id.field_email);
         field_password = (EditText)findViewById(R.id.field_password);
-        field_code = (EditText)findViewById(R.id.field_code);
+        indeterminateBar = (ProgressBar) findViewById(R.id.indeterminateBar);
 
         // Authentication Instance
         Auth = FirebaseAuth.getInstance();
@@ -66,17 +68,12 @@ public class LoginActivity extends AppCompatActivity {
         button_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String code = field_code.getText().toString();
-                if(code.equals("BRUN@ALUNO")||code.equals("ROMANOS@ALUNO")){
-                    signInUser(field_email.getText().toString(), field_password.getText().toString());
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    checkUserData(user);
-                }else{
-                    Toast.makeText(LoginActivity.this, "Código inserido é inválido",
-                            Toast.LENGTH_SHORT).show();
-                }
 
+                loadAnimation(true);
 
+                signInUser(field_email.getText().toString(), field_password.getText().toString());
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                checkUserData(user);
             }
         });
 
@@ -104,6 +101,18 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    void loadAnimation(boolean trigger){
+        if(trigger){
+            field_password.setVisibility(View.INVISIBLE);
+            field_email.setVisibility(View.INVISIBLE);
+            indeterminateBar.setVisibility(View.VISIBLE);
+        }else{
+            field_password.setVisibility(View.VISIBLE);
+            field_email.setVisibility(View.VISIBLE);
+            indeterminateBar.setVisibility(View.GONE);
+        }
+    }
+
     private void signInUser(String email, String password) {
         Log.d(TAG, "signInUser:" + email);
 
@@ -125,6 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, "Falha na tentativa de acesso",
                                     Toast.LENGTH_SHORT).show();
+                            loadAnimation(false);
                         }
 
                         // ...
@@ -137,11 +147,11 @@ public class LoginActivity extends AppCompatActivity {
             Uri photoUrl = user.getPhotoUrl();
             if(name == null && photoUrl == null){
                 Intent int_UserSettings = new Intent(LoginActivity.this, UserSettingsActivity.class);
-                String code = field_code.getText().toString();
-                int_UserSettings.putExtra("institution", code);
                 startActivity(int_UserSettings);
                 finish();
             }else{
+                Intent int_Main = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(int_Main);
                 finish();
             }
         }
