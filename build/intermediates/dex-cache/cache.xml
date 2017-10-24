@@ -2,22 +2,238 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\4b9c7e800d34f2477055825769e202131b3cb6fa\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_379ca8efa2a9f1024a0a3b818e9858dd55ef1332/classes.dex" />
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_640d61fa80b23ad3bf411e1a9827a6b488ec0b80.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\11e377f31cb9ae5590e9a6239523f2e5dbd6e3c2\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="0e2a83a97cf11a806662bebfc59a125e6efa215d">
-        <dex dex="/home/felipe/Desktop/Brun-Application-quiz_branch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_aecb53d52cfa625bdb1bd098d46aa5022ead2e05/classes.dex" />
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_52927885b95798434904b2ff07c0604c3bcab4f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\78e9915783961e10d17568b2b4a6bf2c9aae932d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_2614cfd401ee8fce1af6f64f7c03522c8f210b81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\e9386e58e86ed4ec9cd71089f557eb59485fe42c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_8c2d635e43fd4c9c67e9cb5015bb051a9a852098.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\d24fa4ee295a87aac3be103f7a411e94b625b484\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_102fca44d930cecd21da25a75fd6d199a798f531.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\75230e820c4348802c85504202964541602060bd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_6ddcfb4d05f0bd6273e75254877aa59856507b98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\d36ce4e25c4cba442a1f4205c9ff942fb62bc8c8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_776e430a24f52b750b5d24f85a7e3ef8a73d51d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\21f4d2c3a272187b3f7021beb5bcd610865c9559\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_b024cd0118fb619c2135cd44c5829c8428c2dbfd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\715c94e8b93b5a48c916e0372e9ccbae428cdb84\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_b3dc0f80c24454d7fc9597b3835bf133e470ed8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\21ec83f32679ddf741a6b4f9d38e60da085ca090\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_50754e6aa9c6793dcaf68c4801ef69458925d67d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\678e9157cd6ab821ed5bfc8e66a3d02f452c6ebc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_8f35f6dbd063031ac55ae9b02904c078deef3f19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\344ae46d5ccb5ce877634c00c4b3a0358adaf3e7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_5df7bb6a1a83404fc44074935b24d4552bb06f4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\6e30a4684fa4ceb46d2ab09d43115808a219fc72\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_049897e13207ac69f61194065fbcec4343a34efb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\9c8e27a9f50d2c5f6b4492c3a33e277d2fa8e04d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_51856ef4f0385cdd8e6d5dbde3cb5d3ec760c944.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\3aa3ab84ee52e1bfa5fd54fda969c1a38b3bad60\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_ed6ce63d55dfcd6a09902cc6489219591f09af42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\72fbbd43eb417370a6d8b5816e06273ff2581433\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_770efb642905fe87acbed208e612978cf561dc48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_6ad8ce16e513b33a52ec92252ccc85057e75cd11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\2c5744048095ad4c83ce2fe1dd411512c265e38a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_34bd193fd48f3378150eb66ebd8e03248701d488.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\f79ddfe633a99d84b365494a63c90fccc2fe6504\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_89f2d440f4f2620c02f7dda4ccfc38fd6e595142.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\c7fb54bdedf08942c273411438b5fbcd95e04213\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_ce312f1452c256a4356675000bf818c0d02a37a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_4c52bc8ded4bd764e67cf4498ece1162cd4d1f1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\3caf1d29d6f77d05fc92b6b647da4e3423edc218\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_ede273311e8bae4f0142e7d54edd86d516557ee5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\1fda140bc2e6d46034c28e56b7d7482fbeb99127\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_e38eff343c034db2a78312e564a53705eb513d5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\0c08669771a4c307fa179045b50f744251ce9543\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_937afc95dca89cb369e21f8993aecdef31511243.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\b17774c941ffc4dea72509b909c94c8625e1253b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_359263ce27fe17525a192007d9a0ac77336f132a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sergio\.android\build-cache\93ce683ab62c3a44d49d3f050b6541069bf923df\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\Sergio\Documents\GitHub\Brun-Application\app\build\intermediates\pre-dexed\debug\classes_95f019f1278af229ffdd390c82f1ddaf0933a75b.jar" />
     </item>
 
 </items>

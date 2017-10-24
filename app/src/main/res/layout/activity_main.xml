@@ -49,6 +49,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Perfil do usuário" />
+            <Button
+                android:id="@+id/button_resultAluno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Resultados dos Alunos" />
 
         </LinearLayout>
     </ScrollView>

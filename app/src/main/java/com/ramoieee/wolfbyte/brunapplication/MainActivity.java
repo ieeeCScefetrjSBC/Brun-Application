@@ -10,21 +10,31 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button_quiz, button_settings;
+    Button button_quiz, button_settings,button_resultadoAlunos;
     TextView view_welcome_text;
-
+    String access;
+    UserInfo myUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("users");
+
 
         button_quiz = (Button) findViewById(R.id.button_quiz);
+        button_resultadoAlunos = (Button) findViewById(R.id.button_resultAluno);
 
 
         button_settings = (Button) findViewById(R.id.button_user_settings);
@@ -38,6 +48,22 @@ public class MainActivity extends AppCompatActivity {
             startActivity(int_SignIn);
             finish();
         } else {
+
+            myRef.child(user.getUid().toString()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()){
+                        myUser = dataSnapshot.getValue(UserInfo.class);
+                        access = myUser.credencial;
+                        showUserInt(access);
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
             Toast.makeText(MainActivity.this, "Usuário conectado",
                     Toast.LENGTH_SHORT).show();
             view_welcome_text.setText("Olá, " + user.getDisplayName());
@@ -48,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent int_subject = new Intent(MainActivity.this, SubjectsActivity.class);
                 startActivity(int_subject);
-                finish();
             }
         });
 
@@ -57,7 +82,45 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent int_UserSettings = new Intent(MainActivity.this, UserSettingsActivity.class);
                 startActivity(int_UserSettings);
+                finish();
             }
         });
+
+        button_resultadoAlunos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int_resultadoAlunos = new Intent(MainActivity.this, ResultadoAlunoActivity.class);
+                startActivity(int_resultadoAlunos);
+                finish();
+            }
+        });
+    }
+
+    void showUserInt(String s){
+        switch (s){
+            case "admin":
+
+                button_quiz.setVisibility(View.VISIBLE);
+                button_settings.setVisibility(View.VISIBLE);
+                button_resultadoAlunos.setVisibility(View.VISIBLE);
+                break;
+
+            case "professor":
+                button_quiz.setVisibility(View.GONE);
+                button_settings.setVisibility(View.VISIBLE);
+                button_resultadoAlunos.setVisibility(View.VISIBLE);
+                break;
+
+            case "aluno":
+
+                button_quiz.setVisibility(View.VISIBLE);
+                button_settings.setVisibility(View.VISIBLE);
+                button_resultadoAlunos.setVisibility(View.GONE);
+                // botão de acesso ao quiz
+                // botão de acesso ao perfil
+                break;
+
+        }
+
     }
 }
