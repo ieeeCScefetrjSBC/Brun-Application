@@ -9,7 +9,7 @@ public class UserInfo {
     String fav_area;
     String institution;
     String bonus_time;
-    String credencial;
+    String credential;
 
 
     UserInfo(){
@@ -20,6 +20,6 @@ public class UserInfo {
         this.fav_area = null;
         this.institution = null;
         this.bonus_time = null;
-        this.credencial = null;
+        this.credential = null;
     }
 }
