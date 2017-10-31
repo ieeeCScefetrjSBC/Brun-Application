@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     if (dataSnapshot.exists()){
                         myUser = dataSnapshot.getValue(UserInfo.class);
                         access = myUser.credential;
-                        showUserInt(access);
+                        //showUserInt(access);
                     }
                 }
 
