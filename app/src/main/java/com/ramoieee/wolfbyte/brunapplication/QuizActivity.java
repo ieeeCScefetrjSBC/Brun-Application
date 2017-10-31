@@ -225,8 +225,8 @@ public class QuizActivity extends AppCompatActivity {
         if (indiceSalvar != 0) {
             Toast.makeText(this,"Parou na pergunta: "+ ind , Toast.LENGTH_LONG).show();
         }
-
         editor.commit();
+
     }
     //Recuperar indice
     public int lerIndice(){
