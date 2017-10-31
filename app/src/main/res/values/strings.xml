@@ -30,5 +30,7 @@
     </string-array>
 
     <string name="subject_prompt">Selecione um assunto</string>
+    <string name="Turma_prompt">Selecione uma Turma</string>
+    <string name="individual_prompt">Selecione um aluno da Turma</string>
 
 </resources>
