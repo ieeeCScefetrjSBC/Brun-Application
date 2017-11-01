@@ -3,20 +3,11 @@
 
     <item
         is-multidex="true"
-        jar="/home/felipe/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf/gson-2.8.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
-        <dex dex="/home/felipe/repos/Brun-Application/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.8.2_11db2946b27b345863be02540b8a58b9cefd2801/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/felipe/repos/Brun-Application/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="5a8585dde8688ac9874f718e231b13774db1fc1a">
+        sha1="6dc9222b8f33badeb006fda9ec1d6a49925bf72e">
         <dex dex="/home/felipe/repos/Brun-Application/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_53442091d5d4d5dcebb47f79e2e7e6e9220800e6/classes.dex" />
     </item>
     <item

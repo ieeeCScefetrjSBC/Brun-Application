@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         } else {
 
-            myRef.child(user.getUid().toString()).addValueEventListener(new ValueEventListener() {
+            myRef.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()){

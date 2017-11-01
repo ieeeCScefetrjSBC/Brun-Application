@@ -15,11 +15,71 @@
       },
       "oauth_client": [
         {
+          "client_id": "909560250146-ndd5rm88qft23rcgs4408f1mfd2032ra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ramoieee.wolfbyte.brunapplication",
+            "certificate_hash": "07bf4a989e65eab26f685b91ccd9873f5182a4bf"
+          }
+        },
+        {
+          "client_id": "909560250146-41karee4unppubbbcrnk5mhqmhr3attc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ramoieee.wolfbyte.brunapplication",
+            "certificate_hash": "a8e6dc01b0c0c733319f9947585468fe65504f8a"
+          }
+        },
+        {
           "client_id": "909560250146-nc8h4gqlo95k2k9p3nmhg1dr56h920n3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.ramoieee.wolfbyte.brunapplication",
             "certificate_hash": "1666d2d5e3eff98fe634c2ddaa3b58c2be666c26"
+          }
+        },
+        {
+          "client_id": "909560250146-7rfqoa9sc44609qntqb4rgqbvjtilicq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA191FbdzGjsJZPK064wNEUHRIjLvzo3kc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909560250146-7rfqoa9sc44609qntqb4rgqbvjtilicq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909560250146:android:ed77f310dca5c624",
+        "android_client_info": {
+          "package_name": "com.example.thain.teste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909560250146-5e81e8nkn0p4hi2vqgvnc966ijvctr3h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.thain.teste",
+            "certificate_hash": "02159cc562ff168e6db4ed5b072e8c7b4e76c3ee"
           }
         },
         {
