@@ -33,7 +33,9 @@
         <activity android:name=".FeedbackActivity"
             android:label="Resultado final"/>
         <activity android:name=".ResultadoAlunoActivity"
-            android:label="Monitoramento dos Alunos"></activity>
+            android:label="Monitoramento dos Alunos"/>
+        <activity android:name=".ExibicaoActivity"
+            android:label="Exibição dos Resultados dos alunos"></activity>
 
     </application>
 

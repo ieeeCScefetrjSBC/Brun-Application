@@ -22,6 +22,12 @@
             android:textSize="36sp"
             android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turmas:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+
             <Spinner
                 android:id="@+id/spinner_class"
                 android:layout_width="match_parent"
@@ -35,9 +41,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Resultado Turma"
-                android:layout_gravity="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+                android:text="Alunos:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
 
             <Spinner
                 android:id="@+id/spinner_student"
@@ -49,12 +54,13 @@
                 android:prompt="@string/individual_prompt"
                 android:spinnerMode="dialog" />
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <Button
+                android:id="@+id/button_selecionar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Resultado do Aluno"
-                android:layout_gravity="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+                android:text="Selecionar"
+                android:layout_gravity="center_horizontal"/>
 
             <Button
             android:text="Retornar"

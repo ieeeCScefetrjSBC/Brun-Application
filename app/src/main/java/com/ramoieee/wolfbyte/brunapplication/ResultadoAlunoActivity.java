@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ResultadoAlunoActivity extends AppCompatActivity{
 
-    Button button_return ;
+    Button button_return,button_select ;
     Spinner spinner_turma, spinner_aluno;
 
 
@@ -41,6 +41,7 @@ public class ResultadoAlunoActivity extends AppCompatActivity{
         spinner_turma = (Spinner)findViewById(R.id.spinner_class);
         spinner_aluno = (Spinner)findViewById(R.id.spinner_student);
         button_return = (Button) findViewById(R.id.button_voltar);
+        button_select = (Button) findViewById(R.id.button_selecionar);
 
         /* spinner_turma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -80,6 +81,16 @@ public class ResultadoAlunoActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent int_back = new Intent(ResultadoAlunoActivity.this, MainActivity.class);
                 startActivity(int_back);
+            }
+        });
+
+        button_select.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent int_quiz = new Intent(ResultadoAlunoActivity.this, ExibicaoActivity.class);
+               // int_quiz.putExtra("Turma", spinner_turma.getSelectedItem().toString());
+               // int_quiz.putExtra("Aluno", spinner_aluno.getSelectedItem().toString());
+                startActivity(int_quiz);
+                finish();
             }
         });
 
