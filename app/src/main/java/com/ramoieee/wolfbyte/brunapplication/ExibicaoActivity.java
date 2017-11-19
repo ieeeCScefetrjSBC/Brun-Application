@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+
 /**
  * Created by Sergio on 15/11/2017.
  */
@@ -13,7 +15,7 @@ import android.widget.ProgressBar;
 public class ExibicaoActivity extends AppCompatActivity {
 
 
-
+    TextView resultPorcentagem;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +23,12 @@ public class ExibicaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exibicao);
 
         ProgressBar resultadoProgressBar=(ProgressBar)findViewById(R.id.progressBar);
+        resultPorcentagem=(TextView) findViewById(R.id.porcentagem);
        // resultadoProgressBar.setMax(100);
         //resultadoProgressBar.setProgress(35);
-        resultadoProgressBar.setBackgroundColor(Color.BLACK);
-        resultadoProgressBar.setVisibility(View.VISIBLE);
+
+        int progressValue = resultadoProgressBar.getProgress();
+        resultPorcentagem.setText("80%");
 
 
 
