@@ -25,13 +25,17 @@ public class ResultadoAlunoActivity extends AppCompatActivity{
 
 
    /* ListData localList = new ListData();
+      ListData localList2 = new ListData();
 
     public List<String> alunoSpinnerItems = new ArrayList<String>();
-
     ArrayList listFirebase = new ArrayList();
 
+    public List<String> turmasSpinnerItems = new ArrayList<String>();
+    ArrayList listFirebasetwo = new ArrayList();
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference listurmaRef = database.getReference("points").child("listurmas");*/
+    DatabaseReference listurmaRef = database.getReference("points").child("listurmas");
+    DatabaseReference listurmaReftwo = database.getReference("points")*/
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +47,36 @@ public class ResultadoAlunoActivity extends AppCompatActivity{
         button_return = (Button) findViewById(R.id.button_voltar);
         button_select = (Button) findViewById(R.id.button_selecionar);
 
-        /* spinner_turma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*  listurmaRef2.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        listFirebasetwo.clear();
+                        turmasSpinnerItems.clear();
+                        int it=0;
+
+
+                        for (DataSnapshot itemSnapshot1 : dataSnapshot.getChildren()) {
+                            listFirebasetwo.add(itemSnapshot1.getValue(ListData.class));
+                            localList2 = (ListData) listFirebasetwo.get(it);
+                            if(localList2.isOn){
+                                turmasSpinnerItems.add(localList2.name);
+                            }
+                            it++;
+                        }
+
+                        AddItemsOnSpinner(turmasSpinnerItems);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+
+
+
+         spinner_turma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = spinner_turma.getSelectedItem().toString();

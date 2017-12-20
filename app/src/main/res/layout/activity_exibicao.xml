@@ -51,6 +51,16 @@
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
             android:textSize="40dp" />
 
+        <Button
+            android:id="@+id/button_voltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Retornar" />
+
+
 
     </RelativeLayout>
 
