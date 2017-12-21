@@ -81,9 +81,26 @@ public class FeedbackActivity extends AppCompatActivity { //Activity para mostra
 
             }
 
-            /**
-             * ADICIONAR AQUI A GRAVAÇÃO DA PONTUAÇÃO NA BASE DE DADOS
-             * **/
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        DatabaseReference refSavePoints = database.getReference("points");
+        refSavePoints.child("users").child("Example").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot itemSnapshot2 : dataSnapshot.getChildren()) {
+                        pointsUser.add(itemSnapshot2.getValue(Points.class));
+                    }
+                    System.out.println("Pontos: "+pointsUser);
+
+                }else{
+                    System.out.println("teste");
+                }
+            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
